@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.0.3] - 2017-09-25
+## [1.0.0] - 2017-09-25
 
 - Upgraded `bootstrap-styled-utils` from 0.0.2 to 0.0.6.
 
