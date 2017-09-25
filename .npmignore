@@ -1,0 +1,4 @@
+src
+README_INTERNAL.md
+sonar-project.properties
+.gitlab-ci.yml

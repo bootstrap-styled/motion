@@ -1,0 +1,10 @@
+node_modules
+npm-debug.log
+tmp.json
+.DS_Store
+bundle-stats.html
+.idea/
+coverage/
+/reports
+/test-report.xml
+jest_0
