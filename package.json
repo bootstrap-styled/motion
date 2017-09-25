@@ -168,7 +168,7 @@
     "toctoc": "^0.2.3",
     "classnames": "^2.2.5",
     "lodash.omit": "^4.5.0",
-    "bootstrap-styled-utils": "git+ssh://git@module.kopaxgroup.com:20024/styled-components/bootstrap-styled-utils.git#v0.0.1",
+    "bootstrap-styled-utils": "git+ssh://git@module.kopaxgroup.com:20024/styled-components/bootstrap-styled-utils.git#v0.0.2",
     "map-to-css-modules": "^1.0.6",
     "immutable": "^3.8.1"
   },
@@ -217,7 +217,7 @@
     "styled-components": "^2.1.2",
     "classnames": "^2.2.5",
     "lodash.omit": "^4.5.0",
-    "bootstrap-styled-utils": "git+ssh://git@module.kopaxgroup.com:20024/styled-components/bootstrap-styled-utils.git#v0.0.1",
+    "bootstrap-styled-utils": "git+ssh://git@module.kopaxgroup.com:20024/styled-components/bootstrap-styled-utils.git#v0.0.2",
     "map-to-css-modules": "^1.0.6",
     "immutable": "^3.8.1"
   }
