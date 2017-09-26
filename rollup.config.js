@@ -62,9 +62,9 @@ export default {
   input: 'src/index.js',
   sourcemap: true,
   name: pkg.name,
-  external: ['react', 'react-dom', 'prop-types', 'styled-components', 'classnames', 'lodash.omit', 'bootstrap-styled-utils', 'map-to-css-modules', 'immutable'],
+  external: ['react', 'react-dom', 'prop-types', 'styled-components', 'classnames', 'lodash.omit', 'map-to-css-modules', 'immutable'],
   exports: 'named',
   output,
   plugins,
-  globals: { react: 'React', 'react-dom': 'ReactDom', 'prop-types': 'PropTypes', 'styled-components': 'styled', classnames: 'classnames', 'lodash.omit': 'lodash.omit', 'bootstrap-styled-utils': 'bootstrap-styled-utils', 'map-to-css-modules': 'map-to-css-modules', immutable: 'immutable' },
+  globals: { react: 'React', 'react-dom': 'ReactDom', 'prop-types': 'PropTypes', 'styled-components': 'styled', classnames: 'classnames', 'lodash.omit': 'lodash.omit', 'map-to-css-modules': 'map-to-css-modules', immutable: 'immutable' },
 };
