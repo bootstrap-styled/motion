@@ -6,3 +6,4 @@ export { LightIn, LightOut } from './lightspeed';
 export { RotateIn, RotateLeft, RotateRight, RotateUpLeft, RotateUpRight } from './rotate/index';
 export { SlideUp, SlideDown, SlideRight, SlideLeft, SlideRightLeft } from './slide/index';
 export { Flash, RollOut, RollIn, Rubber, Swing, Zoom, Hinge, Pulse, ExpandUp, Entrance, Hatch } from './special';
+export { makeTheme, theme } from './theme';
