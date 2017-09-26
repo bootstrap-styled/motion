@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-styled-motion",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "Library bootstrap-styled-motion description",
   "main": "lib/index.js",
   "jsnext:main": "dist/bootstrap-styled-motion.es.js",
