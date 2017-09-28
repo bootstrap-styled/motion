@@ -15,14 +15,12 @@ const mode = prod ? 'production' : 'development';
 
 console.log(`Creating ${mode} bundle...`);
 
-const output = prod ?
-  [
-    { file: `dist/${pkg.name}.min.js`, format: 'umd' },
-  ] :
-  [
-    { file: `dist/${pkg.name}.js`, format: 'umd' },
-    { file: `dist/${pkg.name}.es.js`, format: 'es' },
-  ];
+const output = prod ? [
+  { file: `dist/${pkg.name}.min.js`, format: 'umd' },
+] : [
+  { file: `dist/${pkg.name}.js`, format: 'umd' },
+  { file: `dist/${pkg.name}.es.js`, format: 'es' },
+];
 
 const plugins = [
   // Unlike Webpack and Browserify, Rollup doesn't automatically shim Node
@@ -41,6 +39,12 @@ const plugins = [
   nodeResolve(),
   commonjs({
     include: 'node_modules/**',
+    namedExports: {
+      // left-hand side can be an absolute path, a path
+      // relative to the current directory, or the name
+      // of a module in node_modules
+      immutable: ['fromJS'],
+    },
   }),
   replace({
     'process.env.NODE_ENV': JSON.stringify(prod ? 'production' : 'development'),
@@ -48,11 +52,11 @@ const plugins = [
   inject({
     process: processShim,
   }),
+  json(),
   babel({
     plugins: ['external-helpers'],
     exclude: 'node_modules/**',
   }),
-  json(),
   cleanup(),
 ];
 
