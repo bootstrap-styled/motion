@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { withTheme } from 'styled-components';
 import cn from 'classnames';
 import omit from 'lodash.omit';
-import { fromJS } from 'immutable/';
+import { fromJS } from 'immutable';
 import mapToCssModules from 'map-to-css-modules';
 import { TYPE_ROTATE } from '../typeEnums';
 import makeKeyframe from '../makeKeyframe';
