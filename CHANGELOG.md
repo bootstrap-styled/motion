@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [?NEXT?] - ????-??-??
+## [v1.0.3] - 2018-04-12
 
 - Fix bug in makeTheme.
 
