@@ -122,7 +122,9 @@ var commonjsGlobal = typeof window !== 'undefined' ? window : typeof global !== 
 
 
 
-
+function unwrapExports (x) {
+	return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, 'default') ? x['default'] : x;
+}
 
 function createCommonjsModule(fn, module) {
 	return module = { exports: {} }, fn(module, module.exports), module.exports;
@@ -2147,7 +2149,7 @@ var immutable = createCommonjsModule(function (module, exports) {
     var newNode;
     var nodes = idx1 === idx2 ?
       [mergeIntoNode(node, ownerID, shift + SHIFT, keyHash, entry)] :
-      ((newNode = new ValueNode(ownerID, keyHash, entry)), idx1 < idx2 ? [node, newNode] : [newNode, node]);
+      (newNode = new ValueNode(ownerID, keyHash, entry), idx1 < idx2 ? [node, newNode] : [newNode, node]);
     return new BitmapIndexedNode(ownerID, (1 << idx1) | (1 << idx2), nodes);
   }
   function createNodes(ownerID, entries, key, value) {
@@ -2961,8 +2963,7 @@ var immutable = createCommonjsModule(function (module, exports) {
       return this._iter.__iterate(
         this._useKeys ?
           function(v, k)  {return fn(v, k, this$0)} :
-          ((ii = reverse ? resolveSize(this) : 0),
-            function(v ) {return fn(v, reverse ? --ii : ii++, this$0)}),
+          (ii = reverse ? resolveSize(this) : 0, function(v ) {return fn(v, reverse ? --ii : ii++, this$0)}),
         reverse
       );
     };
@@ -4815,6 +4816,7 @@ function toHashCode(str) {
   return hash;
 }
 });
+unwrapExports(tools);
 var tools_7 = tools.toHashCode;
 
 var keyframeRefList = [];
@@ -5072,7 +5074,7 @@ function composeAnimation(makeAnimation) {
       for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
         args[_key] = arguments[_key];
       }
-      return _ret = (_temp = (_this = possibleConstructorReturn(this, (_ref = HOC.__proto__ || Object.getPrototypeOf(HOC)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+      return _ret = (_temp = (_this = babelHelpers.possibleConstructorReturn(this, (_ref = HOC.__proto__ || Object.getPrototypeOf(HOC)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
         defaults: {},
         styles: {}
       }, _this.componentWillMount = function () {
@@ -5097,19 +5099,19 @@ function composeAnimation(makeAnimation) {
         }, cb);
       }, _this.updateAnimationStyles = function () {
         var props = _this.props;
-        var defaults$$1 = _this.state.defaults;
-        var duration = props.duration || defaults$$1.duration;
-        var timingFunction = props.timingFunction || defaults$$1.timingFunction;
-        var delay = props.delay || defaults$$1.delay;
-        var direction = props.direction || defaults$$1.direction;
-        var iterations = props.iterations || defaults$$1.iterations;
-        var fillMode = props.fillMode || defaults$$1.fillMode;
-        var playState = props.playState || defaults$$1.playState;
-        var distance = props.distance || defaults$$1.distance;
-        var rotation = props.degree || defaults$$1.rotation;
-        var perspective = props.perspective || defaults$$1.perspective;
-        var backfaceVisibility = props.backfaceVisibility || defaults$$1.backfaceVisibility;
-        var amplification = props.amplification || defaults$$1.amplification;
+        var defaults = _this.state.defaults;
+        var duration = props.duration || defaults.duration;
+        var timingFunction = props.timingFunction || defaults.timingFunction;
+        var delay = props.delay || defaults.delay;
+        var direction = props.direction || defaults.direction;
+        var iterations = props.iterations || defaults.iterations;
+        var fillMode = props.fillMode || defaults.fillMode;
+        var playState = props.playState || defaults.playState;
+        var distance = props.distance || defaults.distance;
+        var rotation = props.degree || defaults.rotation;
+        var perspective = props.perspective || defaults.perspective;
+        var backfaceVisibility = props.backfaceVisibility || defaults.backfaceVisibility;
+        var amplification = props.amplification || defaults.amplification;
         var keyframeName = makeKeyframe(_this.makeAnimation, { distance: distance, rotation: rotation, perspective: perspective, amplification: amplification }, props.keyframes);
         var styles = {};
         styles.animation = keyframeName + ' ' + duration + ' ' + timingFunction + ' ' + delay + ' ' + iterations + ' ' + direction + ' ' + fillMode + ' ' + playState;
@@ -5119,7 +5121,7 @@ function composeAnimation(makeAnimation) {
         _this.setState({
           styles: styles
         });
-      }, _this.makeAnimation = makeAnimation, _temp), possibleConstructorReturn(_this, _ret);
+      }, _this.makeAnimation = makeAnimation, _temp), babelHelpers.possibleConstructorReturn(_this, _ret);
     }
     createClass(HOC, [{
       key: 'componentWillReceiveProps',
