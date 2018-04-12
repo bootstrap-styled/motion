@@ -6111,7 +6111,7 @@ var makeTheme = function makeTheme() {
   v['$motion-bounce-up-distance'] = u['$motion-bounce-up-distance'] || '100%';
   v['$motion-bounce-left-distance'] = u['$motion-bounce-left-distance'] || '100%';
   v['$motion-bounce-right-distance'] = u['$motion-bounce-right-distance'] || '100%';
-  return v;
+  return _extends({}, u, v);
 };
 var theme = makeTheme();
 
