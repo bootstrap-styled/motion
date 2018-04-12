@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.2] - 2018-04-13
+
+- Moving many peer into deps.
+
 ## [1.0.1] - 2017-09-28
 
 - Upgrade dependency [prop-types](https://www.npmjs.com/package/prop-types) from 5.5.10 to 5.6.0.
