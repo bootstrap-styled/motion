@@ -173,7 +173,7 @@ export const makeTheme = (userTheme = {}) => {
   v['$motion-bounce-left-distance'] = u['$motion-bounce-left-distance'] || '100%';
   v['$motion-bounce-right-distance'] = u['$motion-bounce-right-distance'] || '100%';
 
-  return v;
+  return { ...u, ...v };
 };
 
 /* eslint-enable dot-notation */
