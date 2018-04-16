@@ -50,8 +50,11 @@
     "styled",
     "bootstrap"
   ],
-  "author": "Dimitri Kopriwa <dimitri.kopriwa@yeutech.com>",
-  "license": "MIT",
+  "authors": [
+    "Dimitri Kopriwa <dimitri.kopriwa@yeutech.com>",
+    "Alexander Janet <alexander.janet@yeutech.com>",
+    "Adrien Gadaud <adrien.gadaud@yeutech.com>"
+  ],  "license": "MIT",
   "eslintConfig": {
     "parser": "babel-eslint",
     "extends": "airbnb",

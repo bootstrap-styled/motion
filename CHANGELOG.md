@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## [?NEXT?] - ????-??-??
 
-- TODO: write changelog before preparing next tag
+- Update authors in `package.json`.
 
 ## [v1.0.5] - 2018-04-16
 
