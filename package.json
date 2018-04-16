@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-styled-motion",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "bootstrap-styled-motion is a set of React component doing CSS3 animation and transition for being used with bootstrap-styled",
   "main": "lib/index.js",
   "jsnext:main": "dist/bootstrap-styled-motion.es.js",
