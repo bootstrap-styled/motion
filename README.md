@@ -4,13 +4,13 @@ bootstrap-styled-motion components made with styled-components for bootstrap-sty
 
 **Master**
 
-[![build status](https://module.kopaxgroup.com/styled-components/bootstrap-styled-motion/badges/master/build.svg)](https://module.kopaxgroup.com/styled-components/bootstrap-styled-motion/commits/master)
-[![coverage report](https://module.kopaxgroup.com/styled-components/bootstrap-styled-motion/badges/master/coverage.svg)](https://module.kopaxgroup.com/styled-components/bootstrap-styled-motion/commits/master)
+[![build status](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-motion/badges/master/build.svg)](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-motion/commits/master)
+[![coverage report](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-motion/badges/master/coverage.svg)](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-motion/commits/master)
 
 **Dev**
 
-[![build status](https://module.kopaxgroup.com/styled-components/bootstrap-styled-motion/badges/dev/build.svg)](https://module.kopaxgroup.com/styled-components/bootstrap-styled-motion/commits/dev)
-[![coverage report](https://module.kopaxgroup.com/styled-components/bootstrap-styled-motion/badges/dev/coverage.svg)](https://module.kopaxgroup.com/styled-components/bootstrap-styled-motion/commits/dev)
+[![build status](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-motion/badges/dev/build.svg)](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-motion/commits/dev)
+[![coverage report](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-motion/badges/dev/coverage.svg)](https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-motion/commits/dev)
 
 ## Table of Contents
 
@@ -98,7 +98,7 @@ import {
 
 Clone project
 
-    git clone ssh://git@module.kopaxgroup.com:20024/styled-components/bootstrap-styled-motion.git
+    git clone ssh://git@module.kopaxgroup.com:20024/bootstrap-styled/bootstrap-styled-motion.git
 
 Install dependencies
 
