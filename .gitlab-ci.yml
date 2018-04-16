@@ -56,7 +56,7 @@ stages:
   - build
   - test
   - release
-#  - publish
+  - publish
 
 # Job: Build
 build_dev:
@@ -102,8 +102,8 @@ build:
     expire_in: 1 hour
     paths:
       - .
-  except:
-    - dev
+  only:
+    - master
   tags:
     - docker
 
@@ -176,15 +176,15 @@ release:
   tags:
     - docker
 
-## Job: Publish
-#publish:
-#  stage: publish
-#  script:
-#    - git checkout -b v${PACKAGE_VERSION}
-#    - npm run ci-publish || true
-#  dependencies:
-#    - build
-#  only:
-#    - master
-#  tags:
-#    - docker
+# Job: Publish
+publish:
+  stage: publish
+  script:
+    - git checkout ${PACKAGE_VERSION}
+    - npm run ci-publish
+  dependencies:
+    - build
+  only:
+    - master
+  tags:
+    - docker

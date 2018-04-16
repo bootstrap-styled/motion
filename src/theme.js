@@ -3,6 +3,9 @@ export const makeTheme = (userTheme = {}) => {
   const v = {};
   const u = userTheme;
 
+  // all var must be grouped in a named theme
+  v['_name'] = u['_name'] || 'bootstrap-styled';
+
   v['$motion-duration'] = u['$motion-duration'] || {
     xs: '200ms',
     sm: '300ms',

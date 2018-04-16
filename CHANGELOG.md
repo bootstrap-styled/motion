@@ -4,7 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## [?NEXT?] - ????-??-??
 
-- TODO: write changelog before preparing next tag
+- License MIT.
+- Publish to npm.
 
 ## [v1.0.3] - 2018-04-12
 

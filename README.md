@@ -14,52 +14,85 @@ bootstrap-styled-motion components made with styled-components for bootstrap-sty
 
 ## Table of Contents
 
+  - [Prerequisite](#prerequisite)
   - [Installation](#installation)
   - [Animation components](#animation-components)
   - [Changelog](#changelog)
-  - [Reminders](#reminders)
   - [Quick start](#quick-start)
-  - [Release](#release)
   - [License](#license)
 
 ---
 
+## Prerequisite 
+
+```bash
+$ npm install --save react react-dom styled-components
+```
+
 ## Installation
 
-    npm install git+ssh://git@module.kopaxgroup.com:20024/styled-components/bootstrap-styled-motion.git --save
-
-*Don't forget to also install peer dependencies*
+```bash
+$ npm install --save bootstrap-styled-motion
+```
 
 ## Animation components
 
-All our animations components are documented on [bootstrap-styled](https://bootstrap-styled.kopaxgroup.com) documentation: [link](https://bootstrap-styled.kopaxgroup.com/motion/animations). 
+All our animations components are documented on [bootstrap-styled](https://bootstrap-styled.yeutech.com) documentation. 
 
 ```jsx harmony
-export { Blur, Contrast, Brightness, Grayscale, HueRotate, Invert, Opacity, Sepia, Saturate, Dropshadow } from './filters/index';
-export { Bounce, BounceDown, BounceUp, BounceLeft, BounceRight } from './bounce';
-export { FadeIn, FadeInDown, FadeInUp, FadeInLeft, FadeInRight } from './fade/index';
-export { Flip, FlipX, FlipY } from './flip';
-export { LightIn, LightOut } from './lightspeed';
-export { RotateIn, RotateLeft, RotateRight, RotateUpLeft, RotateUpRight } from './rotate/index';
-export { SlideUp, SlideDown, SlideRight, SlideLeft, SlideRightLeft } from './slide/index';
-export { Flash, RollOut, RollIn, Rubber, Swing, Zoom, Hinge, Pulse, ExpandUp, Entrance, Hatch } from './special';
+import { 
+  Blur, 
+  Contrast, 
+  Brightness, 
+  Grayscale, 
+  HueRotate, 
+  Invert, 
+  Opacity, 
+  Sepia, 
+  Saturate, 
+  Dropshadow,
+  Bounce, 
+  BounceDown, 
+  BounceUp, 
+  BounceLeft, 
+  BounceRight,
+  FadeIn, 
+  FadeInDown, 
+  FadeInUp, 
+  FadeInLeft, 
+  FadeInRight,
+  Flip, 
+  FlipX, 
+  FlipY,
+  LightIn, 
+  LightOut,
+  RotateIn, 
+  RotateLeft, 
+  RotateRight, 
+  RotateUpLeft, 
+  RotateUpRight,
+  SlideUp, 
+  SlideDown, 
+  SlideRight, 
+  SlideLeft, 
+  SlideRightLeft,
+  Flash, 
+  RollOut, 
+  RollIn, 
+  Rubber, 
+  Swing, 
+  Zoom, 
+  Hinge, 
+  Pulse, 
+  ExpandUp, 
+  Entrance, 
+  Hatch,
+} from 'bootstrap-styled-motion';
 ```
 
 ## Changelog
 
   - View [Changelog](CHANGELOG.md)
-
-## Reminders
-
-**⚠️ When using this plugin, you must import in the first line of your application javascript entry file `babel-polyfill`: ⚠️**
-  
-    import "babel-polyfill";
-    
-To enable ES features in older browsers, you MUST include in the package.json
-
-    "browserslist": ["ie >= 9", "last 2 versions"]
-    // or
-    "browserslist": ["ie >= 10", "last 2 versions"]
 
 ## Quick start
 
@@ -97,26 +130,16 @@ Watch the `/lib` directory
 
 - `master` only accept merge requests from `dev`
 
-`dev` is the developement branch. It should be used by developers for applying their merge requests.
+`dev` is the development branch. It should be used by developers for applying their merge requests.
 
-If you wish to implement new functionalities you need to do a merge request including your change on the `dev` branch.
+If you wish to implement new features you need to do a merge request including your change on the `dev` branch.
 
     git checkout dev
     git checkout $(whoami)-dev
     git push -u origin $(whoami)-dev 
-
-You can now start working on your branch. Don't forget to check `Delete branch when merged`.
-
-## Release
-
-Merge `dev` into `master` will release a new version and prepare a new version in `dev`.
-
-To release a new version, edit the [Changelog](CHANGELOG.md) and set the version in `package.json` and merge your change into `master`.
-
-**⚠️ if you are releasing on a git repository instead of a npm repository, **DO NOT** forget to remove `build`, and `dist` from the `.gitignore` ⚠️**
-
-    sed -i "/lib\|dist/d" .gitignore
-
+    
 ## License
 
-Copyright (c) 2017 Kopax Ltd. For more information `contact@kopaxgroup.com`. Made with [rollup-umd](https://module.kopaxgroup.com/dev-tools/rollup-umd/tags/0.1.5) 0.1.5
+Licensed under the MIT License, Copyright © 2017-present Yeutech Company Limited.
+
+See [LICENSE](LICENSE.md) for more information.
