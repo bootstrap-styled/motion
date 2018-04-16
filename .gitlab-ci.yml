@@ -1,4 +1,4 @@
-image: kopaxgroup/node7-jdk8-sonarscanner2:latest
+image: kopaxgroup/node9-jdk8-flyway4-sonarscanner2-docker17-debian
 
 variables:
   GIT_STRATEGY: none
@@ -180,6 +180,7 @@ release:
 publish:
   stage: publish
   script:
+    - git fetch --all
     - git checkout ${PACKAGE_VERSION}
     - npm run ci-publish
   dependencies:
