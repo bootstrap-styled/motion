@@ -50,11 +50,12 @@
     "styled",
     "bootstrap"
   ],
-  "authors": [
-    "Dimitri Kopriwa <dimitri.kopriwa@yeutech.com>",
-    "Alexander Janet <alexander.janet@yeutech.com>",
-    "Adrien Gadaud <adrien.gadaud@yeutech.com>"
-  ],  "license": "MIT",
+  "author": "Adrien Gadaud <adrien.gadaud@yeutech.vn>",
+  "contributor": [
+    "Alexander Janet <alexander.janet@yeutech.vn>",
+    "Dimitri Kopriwa <dimitri.kopriwa@yeutech.vn> (https://github.com/kopax)"
+  ],
+  "license": "MIT",
   "eslintConfig": {
     "parser": "babel-eslint",
     "extends": "airbnb",
@@ -122,6 +123,12 @@
     }
   },
   "devDependencies": {
+    "@bootstrap-styled/provider": "^1.2.0",
+    "@semantic-release/changelog": "^3.0.0",
+    "@semantic-release/git": "^7.0.5",
+    "@semantic-release/github": "^5.2.1",
+    "@semantic-release/npm": "^4.0.0",
+    "@yeutech-lab/rollup-umd-documentation": "^2.4.5",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^7.2.3",
@@ -174,14 +181,17 @@
     "rollup-plugin-uglify": "^2.0.1",
     "rollup-plugin-visualizer": "^0.3.1",
     "rollup-watch": "^4.3.1",
-    "sinon": "^2.3.2",
-    "styled-components": "^3.2.5",
-    "toctoc": "^0.2.3"
+    "semantic-release": "^15.8.0",
+    "sinon": "^3.3.0",
+    "styled-components": "^4.1.1",
+    "toctoc": "^0.3.2",
+    "webpack": "^4.16.1"
   },
   "jest": {
     "roots": [
       "<rootDir>/src/"
     ],
+    "testURL": "http://localhost",
     "testPathIgnorePatterns": [
       "<rootDir>/dist/",
       "<rootDir>/lib/"
@@ -220,16 +230,17 @@
     "lint-staged"
   ],
   "dependencies": {
-    "prop-types": "^15.6.0",
-    "classnames": "^2.2.5",
+    "bootstrap-styled": "^2.0.4",
+    "prop-types": "^15.6.2",
+    "classnames": "^2.2.6",
     "lodash.omit": "^4.5.0",
     "map-to-css-modules": "^1.0.6",
     "immutable": "^3.8.1",
-    "bootstrap-styled-utils": "^1.0.2"
+    "@bootstrap-styled/utils": "^1.6.1"
   },
   "peerDependencies": {
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
-    "styled-components": "^3.2.5"
+    "styled-components": "^4.1.0"
   }
 }
