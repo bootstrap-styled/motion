@@ -1,0 +1,42 @@
+{
+  "ignore": [
+    "**/__tests__/**",
+    "**/*.test.{js,jsx,ts,tsx}",
+    "**/*.spec.{js,jsx,ts,tsx}",
+    "**/*.d.ts"
+  ],
+  "ribbon": {
+    "url": "https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-motion",
+    "text": "Fork us on GitLab"
+  },
+  "pagePerSection": true,
+  "sections": [
+    {
+      "name": "Introduction",
+      "content": "docs/introduction.md"
+    },
+    {
+      "name": "Documentation",
+      "sections": [
+        {
+          "name": "Prerequisite",
+          "content": "docs/prerequisite.md"
+        },
+        {
+          "name": "Installation",
+          "content": "docs/installation.md"
+        }
+      ],
+      "sectionDepth": 0
+    },
+    {
+      "name": "UI Components",
+      "components": "src/**/*.js",
+      "sectionDepth": 1
+    },
+    {
+      "name": "Developers",
+      "content": "docs/commands.md"
+    }
+  ]
+}

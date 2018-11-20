@@ -64,8 +64,9 @@ const plugins = [
       // left-hand side can be an absolute path, a path
       // relative to the current directory, or the name
       // of a module in node_modules
-      'bootstrap-styled-utils': ['parseTransition'],
+      '@bootstrap-styled/utils': ['parseTransition'],
       immutable: ['fromJS'],
+      'react-is': ['isElement', 'isValidElementType', 'ForwardRef'],
     },
   }),
   replace({

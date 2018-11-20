@@ -1,6 +1,6 @@
-# bootstrap-styled-motion
+# Bootstrap Styled Motion
 
-bootstrap-styled-motion components made with styled-components for bootstrap-styled.
+Bootstrap Styled Motion components made with styled-components for bootstrap-styled.
 
 **Master**
 

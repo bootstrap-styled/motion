@@ -1,5 +1,5 @@
 import { css, keyframes } from 'styled-components';
-import { toHashCode } from 'bootstrap-styled-utils/lib/tools';
+import { toHashCode } from '@bootstrap-styled/utils/lib/tools';
 
 /**
  * This will store a reference to all the keyframe created with makeKeyFrame
