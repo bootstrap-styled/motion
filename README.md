@@ -50,7 +50,7 @@ import {
   Opacity, 
   Sepia, 
   Saturate, 
-  Dropshadow,
+  DropShadow,
   Bounce, 
   BounceDown, 
   BounceUp, 

@@ -1,3 +1,11 @@
+/**
+ * @public
+ * @name makeLightIn
+ * @description make light in object
+ * @param distance
+ * @param rotation
+ * @returns {{from: {transform: string, opacity: number}, 40%: {transform: string, opacity: number}, 80%: {transform: string, opacity: number}, to: {transform: string, opacity: number}}}
+ */
 export function makeLightIn({ distance, rotation }) {
   return {
     from: {
@@ -19,6 +27,14 @@ export function makeLightIn({ distance, rotation }) {
   };
 }
 
+/**
+ * @public
+ * @name makeLightOut
+ * @description make light out object
+ * @param distance
+ * @param rotation
+ * @returns {{from: {transform: string, opacity: number}, 40%: {transform: string, opacity: number}, 80%: {transform: string, opacity: number}, to: {transform: string, opacity: number}}}
+ */
 export function makeLightOut({ distance, rotation }) {
   return {
     from: {

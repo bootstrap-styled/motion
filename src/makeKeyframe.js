@@ -8,16 +8,35 @@ import { toHashCode } from '@bootstrap-styled/utils/lib/tools';
 const keyframeRefList = [];
 
 /**
- * This will convert an object into a valid keyframe string for styled
- * @param obj
- * @returns {string}
+ * @public
+ * @name toKeyframeString
+ * @description This will convert an object into a valid keyframe string for styled
+ * @param keyFrameObject {Object} - Object of keyFrames
+ * @example
+ * const kf = {
+ *   from: {
+ *     width: '0%',
+ *   },
+ *   '20%, 40%': {
+ *     width: '75%',
+ *   },
+ *   '60%': {
+ *     width: '25%',
+ *   },
+ *   to: {
+ *     width: '100%',
+ *   },
+ * };
+ * toKeyframeString(kf);
+ * // return the key frame stringified
+ * @returns {string} - The keyframe stringified
  */
-export function toKeyframeString(obj) {
+export function toKeyframeString(keyFrameObject) {
   let keyframeStr = '';
-  Object.keys(obj).forEach((step) => {
+  Object.keys(keyFrameObject).forEach((step) => {
     keyframeStr += `${step}{`;
-    Object.keys(obj[step]).forEach((cssAttr) => {
-      keyframeStr += `${cssAttr}:${obj[step][cssAttr]};`;
+    Object.keys(keyFrameObject[step]).forEach((cssAttr) => {
+      keyframeStr += `${cssAttr}:${keyFrameObject[step][cssAttr]};`;
     });
     keyframeStr += '}';
   });
@@ -26,14 +45,16 @@ export function toKeyframeString(obj) {
 
 
 /**
- * inject a keyframe in body <style> if it doesn't exist already
- * @param makeAnimation
- * @param options set from user through component props
- * @param userKeyframes
+ * @public
+ * @name makeKeyframe
+ * @description make styled keyframe
+ * @param make {function} - make animation function
+ * @param options {object} - options
+ * @param userKeyframes {object} - user keyframes
+ * @param maxKeyframe {number} [maxKeyframe=50] - max key frame injected in the page before warning
+ * @returns {string} the name of the keyframe
  */
-export default function makeKeyframe(make, options, userKeyframes = {}) {
-  const MAX_KEYFRAMES = 50;
-
+export default function makeKeyframe(make, options, userKeyframes = {}, maxKeyframe = 50) {
   const merge = make(options);
   Object.keys(userKeyframes).forEach((key) => {
     merge[key] = Object.assign({}, merge[key], userKeyframes[key]);
@@ -52,7 +73,7 @@ export default function makeKeyframe(make, options, userKeyframes = {}) {
   `;
 
   const animationRule = css`
-    ${animation} 1s infinite alternate;
+    ${animation.name} 1s infinite alternate;
   `;
 
   keyframeRefList.push({
@@ -61,7 +82,7 @@ export default function makeKeyframe(make, options, userKeyframes = {}) {
   });
 
   /* istanbul ignore if */
-  if (keyframeRefList.length > MAX_KEYFRAMES) {
+  if (keyframeRefList.length > maxKeyframe) {
     console.warn(`You might have done a mistake because of current keyframes injection count. You currently have ${keyframeRefList.length} keyframes in your page.`); // eslint-disable-line no-console
   }
   return name;

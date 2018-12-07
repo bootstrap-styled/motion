@@ -1,3 +1,9 @@
+/**
+ * @public
+ * @name makeBounce
+ * @description make bounce object
+ * @returns {{from: {animation-timing-function: string}, 0%: {opacity: number, transform: string}, 20%: {transform: string}, 40%: {transform: string}, 60%: {opacity: number, transform: string}, 80%: {transform: string}, to: {opacity: number, transform: string}}}
+ */
 export function makeBounce() {
   return {
     from: {
@@ -27,6 +33,13 @@ export function makeBounce() {
   };
 }
 
+/**
+ * @public
+ * @name makeBounceDown
+ * @description make bounce down object
+ * @param distance
+ * @returns {{from: {animation-timing-function: string}, 0%: {transform: string}, 60%: {transform: string}, 75%: {transform: string}, 90%: {transform: string}, to: {transform: string}}}
+ */
 export function makeBounceDown({ distance }) {
   return {
     from: {
@@ -50,6 +63,13 @@ export function makeBounceDown({ distance }) {
   };
 }
 
+/**
+ * @public
+ * @name makeBounceUp
+ * @description make bounce up object
+ * @param distance
+ * @returns {{from: {animation-timing-function: string}, 0%: {transform: string}, 60%: {transform: string}, 75%: {transform: string}, 90%: {transform: string}, to: {transform: string}}}
+ */
 export function makeBounceUp({ distance }) {
   return {
     from: {
@@ -73,6 +93,13 @@ export function makeBounceUp({ distance }) {
   };
 }
 
+/**
+ * @public
+ * @name makeBounceLeft
+ * @description make bounce left object
+ * @param distance
+ * @returns {{from: {animation-timing-function: string}, 0%: {transform: string}, 60%: {transform: string}, 75%: {transform: string}, 90%: {transform: string}, to: {transform: string}}}
+ */
 export function makeBounceLeft({ distance }) {
   return {
     'from, 60% 75% 90%, to': {
@@ -98,6 +125,13 @@ export function makeBounceLeft({ distance }) {
   };
 }
 
+/**
+ * @public
+ * @name makeBounceRight
+ * @description make bounce right object
+ * @param distance
+ * @returns {{from: {animation-timing-function: string}, 0%: {transform: string}, 60%: {transform: string}, 75%: {transform: string}, 90%: {transform: string}, to: {transform: string}}}
+ */
 export function makeBounceRight({ distance }) {
   return {
     'from, 60% 75% 90%, to': {

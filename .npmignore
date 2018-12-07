@@ -3,6 +3,8 @@ sonar-project.properties
 .gitlab-ci.yml
 internals
 .babelrc
+babel.config.js
+babel.ext.json
 .editorconfig
 .eslintignore
 bundle-stats.html
@@ -16,3 +18,5 @@ coverage/
 docs/
 reports/
 /styleguide
+lib/**/*.md
+src/**/*.md

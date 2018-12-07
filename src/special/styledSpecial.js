@@ -1,5 +1,11 @@
 import { TYPE_ROTATE } from '../typeEnums';
 
+/**
+ * @public
+ * @name makeFlash
+ * @description flash object
+ * @returns {{from: {opacity: number}, 25%: {opacity: number}, 50%: {opacity: number}, 75%: {opacity: number}, to: {opacity: number}}}
+ */
 export function makeFlash() {
   return {
     from: {
@@ -20,6 +26,14 @@ export function makeFlash() {
   };
 }
 
+/**
+ * @public
+ * @name makeRollIn
+ * @description roll in object
+ * @param distance
+ * @param amplification
+ * @returns {{from: {transform: string, opacity: number}, to: {transform: string, opacity: number}}}
+ */
 export function makeRollIn({ distance, amplification }) {
   return {
     from: {
@@ -35,6 +49,14 @@ export function makeRollIn({ distance, amplification }) {
 
 makeRollIn.type = TYPE_ROTATE;
 
+/**
+ * @public
+ * @name makeRollOut
+ * @description roll out object
+ * @param distance
+ * @param amplification
+ * @returns {{from: {opacity: number}, to: {transform: string, opacity: number}}}
+ */
 export function makeRollOut({ distance, amplification }) {
   return {
     from: {
@@ -49,6 +71,13 @@ export function makeRollOut({ distance, amplification }) {
 
 makeRollOut.type = TYPE_ROTATE;
 
+/**
+ * @public
+ * @name makeRubber
+ * @description Rubber object
+ * @param amplification
+ * @returns {{from: {transform: string}, 30%: {transform: string}, 40%: {transform: string}, 50%: {transform: string}, 65%: {transform: string}, 75%: {transform: string}, to: {transform: string}}}
+ */
 export function makeRubber({ amplification }) {
   return {
     from: {
@@ -75,6 +104,13 @@ export function makeRubber({ amplification }) {
   };
 }
 
+/**
+ * @public
+ * @name makeSwing
+ * @description make swing object
+ * @param amplification
+ * @returns {{20%: {transform: string}, 40%: {transform: string}, 60%: {transform: string}, 80%: {transform: string}, to: {transform: string}}}
+ */
 export function makeSwing({ amplification }) {
   return {
     '20%': {
@@ -97,7 +133,12 @@ export function makeSwing({ amplification }) {
 
 makeSwing.type = TYPE_ROTATE;
 
-
+/**
+ * @name makeZoom
+ * @description make zoom object
+ * @param amplification
+ * @returns {{from: {opacity: number, transform: string}, to: {opacity: number}}}
+ */
 export function makeZoom({ amplification }) {
   return {
     from: {
@@ -110,6 +151,13 @@ export function makeZoom({ amplification }) {
   };
 }
 
+/**
+ * @public
+ * @name makeHinge
+ * @description make hinge object
+ * @param amplification
+ * @returns {{from: {transform-origin: string, animation-timing-function: string, opacity: number}, 20%, 40%: {transform-origin: string, transform: string, animation-timing-function: string, opacity: number}, 60%, 80%: {transform-origin: string, transform: string, animation-timing-function: string, opacity: number}, to: {transform: string, opacity: number}}}
+ */
 export function makeHinge({ amplification }) {
   return {
     from: {
@@ -136,6 +184,13 @@ export function makeHinge({ amplification }) {
   };
 }
 
+/**
+ * @public
+ * @name makePulse
+ * @description make pulse object
+ * @param amplification
+ * @returns {{from: {transform: string}, 50%: {transform: string}, to: {transform: string}}}
+ */
 export function makePulse({ amplification }) {
   return {
     from: {
@@ -150,6 +205,13 @@ export function makePulse({ amplification }) {
   };
 }
 
+/**
+ * @public
+ * @name makeExpandUp
+ * @description make expand up object
+ * @param amplification
+ * @returns {{0%: {transform: string}, 60%: {transform: string}, 75%: {transform: string}, 100%: {transform: string}}}
+ */
 export function makeExpandUp({ amplification }) {
   return {
     '0%': {
@@ -167,6 +229,13 @@ export function makeExpandUp({ amplification }) {
   };
 }
 
+/**
+ * @public
+ * @name makeEntrance
+ * @description make entrance object
+ * @param amplification
+ * @returns {{0%: {transform: string, opacity: number}, 30%: {transform: string, opacity: number}, 45%: {transform: string, opacity: number}, 60%: {transform: string, opacity: number}, 75%: {transform: string, opacity: number}, 90%: {transform: string, opacity: number}, 100%: {transform: string, opacity: number}}}
+ */
 export function makeEntrance({ amplification }) {
   return {
     '0%': {
@@ -200,6 +269,13 @@ export function makeEntrance({ amplification }) {
   };
 }
 
+/**
+ * @public
+ * @name makeHatch
+ * @description make hatch object
+ * @param amplification
+ * @returns {{0%: {transform: string}, 20%: {transform: string}, 35%: {transform: string}, 50%: {transform: string}, 65%: {transform: string}, 80%: {transform: string}, 100%: {transform: string}}}
+ */
 export function makeHatch({ amplification }) {
   return {
     '0%': {

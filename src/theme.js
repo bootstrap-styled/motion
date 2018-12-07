@@ -1,4 +1,4 @@
-import { makeScopedTheme, toMakeScopedTheme } from 'bootstrap-styled/lib/utils';
+import { makeScopedTheme, toMakeTheme } from 'bootstrap-styled/lib/utils';
 
 /* eslint-disable dot-notation */
 const dynamicTheme = () => {
@@ -179,8 +179,27 @@ const dynamicTheme = () => {
 
 /* eslint-enable dot-notation */
 
-const theme = makeScopedTheme(dynamicTheme(), 'motion');
+const theme = makeScopedTheme('motion', dynamicTheme());
 
-export const makeTheme = toMakeScopedTheme(theme);
+/**
+ * @public
+ * @name makeTheme
+ * @description makeTheme motion
+ * @param {object} [theme={}] - The theme for your app
+ * @example
+ * import { makeTheme } from '$PACKAGE_NAME';
+ * const theme = makeTheme({
+ *   motion: {
+ *    '$motion-bounce-up-distance': '150px',
+ *   },
+ * })
+ * @return {object} - theme
+ */
+export const makeTheme = toMakeTheme(theme);
 
+/**
+ * @public
+ * @name theme
+ * @description it's the motion theme for Bootstrap Styled
+ */
 export default theme;

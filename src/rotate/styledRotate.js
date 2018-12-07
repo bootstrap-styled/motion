@@ -1,5 +1,12 @@
 import { TYPE_ROTATE } from '../typeEnums';
 
+/**
+ * @public
+ * @name makeRotateIn
+ * @description make rotate in object
+ * @param rotation
+ * @returns {{from: {transform-origin: string, transform: string, opacity: number}, to: {transform: string, opacity: number}}}
+ */
 export function makeRotateIn({ rotation }) {
   return {
     from: {
@@ -16,6 +23,13 @@ export function makeRotateIn({ rotation }) {
 
 makeRotateIn.type = TYPE_ROTATE;
 
+/**
+ * @public
+ * @name makeRotateLeft
+ * @description make rotate left object
+ * @param rotation
+ * @returns {{from: {transform-origin: string, transform: string, opacity: number}, to: {transform: string, opacity: number}}}
+ */
 export function makeRotateLeft({ rotation }) {
   return {
     from: {
@@ -33,6 +47,13 @@ export function makeRotateLeft({ rotation }) {
 
 makeRotateLeft.type = TYPE_ROTATE;
 
+/**
+ * @public
+ * @name makeRotateRight
+ * @description make rotate right object
+ * @param rotation
+ * @returns {{from: {transform-origin: string, transform: string, opacity: number}, to: {transform: string, opacity: number}}}
+ */
 export function makeRotateRight({ rotation }) {
   return {
     from: {
@@ -50,6 +71,13 @@ export function makeRotateRight({ rotation }) {
 
 makeRotateRight.type = TYPE_ROTATE;
 
+/**
+ * @public
+ * @name makeRotateUpLeft
+ * @description make rotate up left object
+ * @param rotation
+ * @returns {{from: {transform-origin: string, transform: string, opacity: number}, to: {transform: string, opacity: number}}}
+ */
 export function makeRotateUpLeft({ rotation }) {
   return {
     from: {
@@ -67,6 +95,13 @@ export function makeRotateUpLeft({ rotation }) {
 
 makeRotateUpLeft.type = TYPE_ROTATE;
 
+/**
+ * @public
+ * @name makeRotateUpRight
+ * @description make rotate up right object
+ * @param rotation
+ * @returns {{from: {transform-origin: string, transform: string, opacity: number}, to: {transform: string, opacity: number}}}
+ */
 export function makeRotateUpRight({ rotation }) {
   return {
     from: {

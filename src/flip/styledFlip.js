@@ -1,5 +1,12 @@
 import { TYPE_ROTATE } from '../typeEnums';
 
+/**
+ * @public
+ * @name makeFlip
+ * @description make flip object
+ * @param perspective
+ * @returns {{from: {transform: string, animation-timing-function: string}, 40%: {transform: string, animation-timing-function: string}, 50%: {transform: string, animation-timing-function: string}, 80%: {transform: string, animation-timing-function: string}, to: {transform: string, animation-timing-function: string}}}
+ */
 export function makeFlip({ perspective }) {
   return {
     from: {
@@ -27,6 +34,14 @@ export function makeFlip({ perspective }) {
 
 makeFlip.type = TYPE_ROTATE;
 
+
+/**
+ * @public
+ * @name makeFlipX
+ * @description make flipX object
+ * @param perspective
+ * @returns {{from: {transform: string, animation-timing-function: string}, 40%: {transform: string, animation-timing-function: string}, 50%: {transform: string, animation-timing-function: string}, 80%: {transform: string, animation-timing-function: string}, to: {transform: string, animation-timing-function: string}}}
+ */
 export function makeFlipX({ perspective }) {
   return {
     from: {
@@ -53,6 +68,14 @@ export function makeFlipX({ perspective }) {
 
 makeFlipX.type = TYPE_ROTATE;
 
+
+/**
+ * @public
+ * @name makeFlipY
+ * @description make flipY object
+ * @param perspective
+ * @returns {{from: {transform: string, animation-timing-function: string}, 40%: {transform: string, animation-timing-function: string}, 50%: {transform: string, animation-timing-function: string}, 80%: {transform: string, animation-timing-function: string}, to: {transform: string, animation-timing-function: string}}}
+ */
 export function makeFlipY({ perspective }) {
   return {
     from: {

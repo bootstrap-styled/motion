@@ -39,3 +39,10 @@ Build documentation in `/public` directory:
 ```bash
 $ npm run styleguide:build
 ```
+
+Build JS documentation
+
+
+```bash
+$ npm run jsdoc
+```

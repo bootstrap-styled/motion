@@ -12,7 +12,7 @@ import {
   makeOpacity,
   makeSaturate,
   makeSepia,
-  makeDropshadow,
+  makeDropShadow,
 } from '../styledFilter';
 
 describe('styledFilter', () => {
@@ -64,9 +64,9 @@ describe('styledFilter', () => {
       expect(typeof makeSaturate({ amplification })).toBe('object');
     });
   });
-  describe('makeDropshadow', () => {
+  describe('makeDropShadow', () => {
     it('should returns an object', () => {
-      expect(typeof makeDropshadow({ amplification })).toBe('object');
+      expect(typeof makeDropShadow({ amplification })).toBe('object');
     });
   });
 });

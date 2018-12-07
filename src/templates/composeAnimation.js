@@ -8,6 +8,14 @@ import mapToCssModules from 'map-to-css-modules';
 import { TYPE_ROTATE } from '../typeEnums';
 import makeKeyframe from '../makeKeyframe';
 
+
+/**
+ * @public
+ * @name composeAnimation
+ * @descriptiton This is a HoC that will compose a motioncomponent
+ * @param makeAnimation {function} - a make keyframe function
+ * @return {Component} - the new Motion component
+ */
 export default function composeAnimation(makeAnimation) {
   // eslint-disable-next-line react/prefer-stateless-function
   class HOC extends React.Component {
@@ -65,18 +73,18 @@ export default function composeAnimation(makeAnimation) {
       /* eslint-disable dot-notation */
       this.setState({
         defaults: {
-          duration: theme['$motion-duration']['md'],
-          timingFunction: theme['$motion-timing-function']['ease'],
-          delay: theme['$motion-delay']['xs'],
-          direction: theme['$motion-direction']['normal'],
-          iterations: theme['$motion-iterations']['xs'],
-          fillMode: theme['$motion-fill-mode']['none'],
-          playState: theme['$motion-play-state']['running'],
-          distance: theme['$motion-distance']['md'],
-          rotation: theme['$motion-degree']['md'],
-          perspective: theme['$motion-perspective']['xs'],
-          backfaceVisibility: theme['$motion-backface-visibility']['hidden'],
-          amplification: theme['$motion-amplification']['md'],
+          duration: theme.motion['$motion-duration']['md'],
+          timingFunction: theme.motion['$motion-timing-function']['ease'],
+          delay: theme.motion['$motion-delay']['xs'],
+          direction: theme.motion['$motion-direction']['normal'],
+          iterations: theme.motion['$motion-iterations']['xs'],
+          fillMode: theme.motion['$motion-fill-mode']['none'],
+          playState: theme.motion['$motion-play-state']['running'],
+          distance: theme.motion['$motion-distance']['md'],
+          rotation: theme.motion['$motion-degree']['md'],
+          perspective: theme.motion['$motion-perspective']['xs'],
+          backfaceVisibility: theme.motion['$motion-backface-visibility']['hidden'],
+          amplification: theme.motion['$motion-amplification']['md'],
         },
       }, cb);
       /* eslint-enable dot-notation */

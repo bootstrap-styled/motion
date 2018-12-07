@@ -1,3 +1,10 @@
+/**
+ * @public
+ * @name makeSlideDown
+ * @description make slide down object
+ * @param distance
+ * @returns {{from: {transform: string}, to: {transform: string}}}
+ */
 export function makeSlideDown({ distance }) {
   return {
     from: {
@@ -9,6 +16,13 @@ export function makeSlideDown({ distance }) {
   };
 }
 
+/**
+ * @public
+ * @name makeSlideUp
+ * @description make slide up object
+ * @param distance
+ * @returns {{from: {transform: string}, to: {transform: string}}}
+ */
 export function makeSlideUp({ distance }) {
   return {
     from: {
@@ -20,6 +34,13 @@ export function makeSlideUp({ distance }) {
   };
 }
 
+/**
+ * @public
+ * @name makeSlideLeft
+ * @description make slide left object
+ * @param distance
+ * @returns {{from: {transform: string}, to: {transform: string}}}
+ */
 export function makeSlideLeft({ distance }) {
   return {
     from: {
@@ -31,6 +52,13 @@ export function makeSlideLeft({ distance }) {
   };
 }
 
+/**
+ * @public
+ * @name makeSlideRight
+ * @description make slide right object
+ * @param distance
+ * @returns {{from: {transform: string}, to: {transform: string}}}
+ */
 export function makeSlideRight({ distance }) {
   return {
     from: {
@@ -42,6 +70,13 @@ export function makeSlideRight({ distance }) {
   };
 }
 
+/**
+ * @public
+ * @name makeSlideRightLeft
+ * @description make slide right left object
+ * @param distance
+ * @returns {{from: {transform: string}, to: {transform: string}}}
+ */
 export function makeSlideRightLeft({ distance }) {
   return {
     from: {

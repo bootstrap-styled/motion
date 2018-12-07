@@ -1,3 +1,10 @@
+/**
+ * @public
+ * @name makeBlur
+ * @descrption make blur object
+ * @param distance
+ * @returns {{0%: {filter: string}, 100%: {filter: string}}}
+ */
 export function makeBlur({ distance }) {
   return {
     '0%': {
@@ -9,6 +16,13 @@ export function makeBlur({ distance }) {
   };
 }
 
+/**
+ * @public
+ * @name makeOpacity
+ * @descrption make opacity object
+ * @param amplification
+ * @returns {{0%: {filter: string}, 100%: {filter: string}}}
+ */
 export function makeOpacity({ amplification }) {
   return {
     '0%': {
@@ -20,6 +34,13 @@ export function makeOpacity({ amplification }) {
   };
 }
 
+/**
+ * @public
+ * @name makeContrast
+ * @descrption make contrast object
+ * @param amplification
+ * @returns {{0%: {filter: string}, 100%: {filter: string}}}
+ */
 export function makeContrast({ amplification }) {
   return {
     '0%': {
@@ -31,6 +52,13 @@ export function makeContrast({ amplification }) {
   };
 }
 
+/**
+ * @public
+ * @name makeBrightness
+ * @descrption make brightness object
+ * @param amplification
+ * @returns {{0%: {filter: string}, 100%: {filter: string}}}
+ */
 export function makeBrightness({ amplification }) {
   return {
     '0%': {
@@ -42,6 +70,14 @@ export function makeBrightness({ amplification }) {
   };
 }
 
+
+/**
+ * @public
+ * @name makeGrayscale
+ * @descrption make grayscale object
+ * @param amplification
+ * @returns {{0%: {filter: string}, 100%: {filter: string}}}
+ */
 export function makeGrayscale({ amplification }) {
   return {
     '0%': {
@@ -53,6 +89,13 @@ export function makeGrayscale({ amplification }) {
   };
 }
 
+/**
+ * @public
+ * @name makeHueRotate
+ * @descrption make hue rotate object
+ * @param amplification
+ * @returns {{0%: {filter: string}, 100%: {filter: string}}}
+ */
 export function makeHueRotate({ rotation }) {
   return {
     '0%': {
@@ -64,6 +107,13 @@ export function makeHueRotate({ rotation }) {
   };
 }
 
+/**
+ * @public
+ * @name makeInvert
+ * @descrption make invert object
+ * @param amplification
+ * @returns {{0%: {filter: string}, 100%: {filter: string}}}
+ */
 export function makeInvert({ amplification }) {
   return {
     '0%': {
@@ -75,6 +125,13 @@ export function makeInvert({ amplification }) {
   };
 }
 
+/**
+ * @public
+ * @name makeSaturate
+ * @descrption make saturate object
+ * @param amplification
+ * @returns {{0%: {filter: string}, 100%: {filter: string}}}
+ */
 export function makeSaturate({ amplification }) {
   return {
     '0%': {
@@ -86,6 +143,13 @@ export function makeSaturate({ amplification }) {
   };
 }
 
+/**
+ * @public
+ * @name makeSepia
+ * @descrption make sepia object
+ * @param amplification
+ * @returns {{0%: {filter: string}, 100%: {filter: string}}}
+ */
 export function makeSepia({ amplification }) {
   return {
     '0%': {
@@ -97,7 +161,14 @@ export function makeSepia({ amplification }) {
   };
 }
 
-export function makeDropshadow({ amplification }) {
+/**
+ * @public
+ * @name makeDropShadow
+ * @descrption make drop shadow object
+ * @param amplification
+ * @returns {{0%: {filter: string}, 100%: {filter: string}}}
+ */
+export function makeDropShadow({ amplification }) {
   return {
     '0%': {
       filter: 'drop-shadow(0px 0px 0px #000)',
