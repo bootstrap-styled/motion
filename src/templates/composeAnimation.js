@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withTheme } from 'styled-components';
+import { withTheme, css } from 'styled-components';
 import cn from 'classnames';
 import omit from 'lodash.omit';
 import { fromJS } from 'immutable';
@@ -53,7 +53,7 @@ export default function composeAnimation(makeAnimation) {
 
     state = {
       defaults: {},
-      styles: {},
+      styles: null,
     };
 
     componentWillMount = () => {
@@ -113,11 +113,15 @@ export default function composeAnimation(makeAnimation) {
 
       const keyframeName = makeKeyframe(this.makeAnimation, { distance, rotation, perspective, amplification }, props.keyframes);
 
-      const styles = {};
-      styles.animation = `${keyframeName} ${duration} ${timingFunction} ${delay} ${iterations} ${direction} ${fillMode} ${playState}`;
+      let styles = css`
+        animation: ${keyframeName} ${duration} ${timingFunction} ${delay} ${iterations} ${direction} ${fillMode} ${playState};
+      `;
 
       if (TYPE_ROTATE === this.makeAnimation.type) {
-        styles.backfaceVisibility = backfaceVisibility;
+        styles = css`
+          ${styles}
+          backface-visibility: ${backfaceVisibility};
+        `;
       }
 
       this.setState({
@@ -152,10 +156,9 @@ export default function composeAnimation(makeAnimation) {
         'rotation',
         'innerRef',
       ]);
-
       return (
         <span
-          style={this.state.styles}
+          css={css`${this.state.styles}`}
           className={mapToCssModules(cn({ 'd-inline-block': inline }, className), cssModule)}
           {...rest}
         >

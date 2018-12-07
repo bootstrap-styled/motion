@@ -1,4 +1,4 @@
-import { css, keyframes } from 'styled-components';
+import { keyframes } from 'styled-components';
 import { toHashCode } from '@bootstrap-styled/utils/lib/tools';
 
 /**
@@ -68,16 +68,12 @@ export default function makeKeyframe(make, options, userKeyframes = {}, maxKeyfr
 
   const keyframeStr = toKeyframeString(merge);
 
-  const animation = keyframes`
+  const name = keyframes`
     ${keyframeStr}
   `;
 
-  const animationRule = css`
-    ${animation.name} 1s infinite alternate;
-  `;
-
   keyframeRefList.push({
-    animationRule,
+    name,
     hashCode,
   });
 
