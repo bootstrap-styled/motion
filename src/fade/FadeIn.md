@@ -1,5 +1,3 @@
-FadeIn example:
-
 ```js
-<FadeIn>🍕</FadeIn>
+<FadeIn>Hello world</FadeIn>
 ```
