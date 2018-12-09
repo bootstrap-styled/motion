@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/bootstrap-styled/motion/compare/v1.0.0...v1.0.1) (2018-12-09)
+
+
+### Bug Fixes
+
+* **release:** GitHub release https://github.com/bootstrap-styled/motion ([e3b4579](https://github.com/bootstrap-styled/motion/commit/e3b4579))
+
 # 1.0.0 (2018-12-09)
 
 
