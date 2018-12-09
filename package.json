@@ -1,6 +1,6 @@
 {
   "name": "@bootstrap-styled/motion",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "Bootstrap Styled Motion provide CSS3 animation through a set of React Components and keyframes",
   "homepage": "https://bootstrap-styled.github.io/motion",
   "main": "lib/index.js",
