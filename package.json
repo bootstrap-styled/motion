@@ -297,8 +297,7 @@
         "path": "@semantic-release/git",
         "assets": [
           "package.json",
-          "dist/**/*.{js|es}",
-          "lib/**/*.js",
+          "src/**",
           "CHANGELOG.md",
           "README.md",
           "LICENSE.md"
