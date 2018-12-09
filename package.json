@@ -1,6 +1,6 @@
 {
   "name": "@bootstrap-styled/motion",
-  "version": "1.0.6",
+  "version": "1.0.0",
   "description": "Bootstrap Styled Motion provide CSS3 animation through a set of React Components and keyframes",
   "homepage": "https://bootstrap-styled.yeutech.com/motion",
   "main": "lib/index.js",
@@ -36,7 +36,8 @@
     "prestyleguide": "npm run jsdoc",
     "styleguide": "styleguidist server",
     "prestyleguide:build": "npm run jsdoc",
-    "styleguide:build": "styleguidist build"
+    "styleguide:build": "styleguidist build",
+    "postinstall": "node -e \"console.log('\\u001b[31m@bootstrap-styled/motion is deprecated, use @bootstrap-styled/motion instead.')\" || exit 0"
   },
   "repository": {
     "type": "git",
