@@ -320,24 +320,5 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "transitive": {
-    "name": "motion",
-    "scope": "bootstrap-styled",
-    "scopedName": "@bootstrap-styled/motion",
-    "jsnext:main": "dist/@bootstrap-styled/motion.es.js",
-    "module": "dist/@bootstrap-styled/motion.es.js",
-    "homepage": "https://bootstrap-styled.github.io/motion",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/bootstrap-styled/motion.git"
-    },
-    "bugs": {
-      "url": "https://github.com/bootstrap-styled/motion/issues"
-    },
-    "publishConfig": {
-      "access": "public",
-      "registry": "https://registry.npmjs.org"
-    }
   }
 }
