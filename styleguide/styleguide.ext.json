@@ -16,22 +16,20 @@
       "content": "docs/introduction.md"
     },
     {
-      "name": "Documentation",
-      "sections": [
-        {
-          "name": "Prerequisite",
-          "content": "docs/prerequisite.md"
-        },
-        {
-          "name": "Installation",
-          "content": "docs/installation.md"
-        }
-      ],
-      "sectionDepth": 0
+      "name": "Live examples",
+      "content": "docs/live-examples.md"
+    },
+    {
+      "name": "Prerequisite",
+      "content": "docs/prerequisite.md"
+    },
+    {
+      "name": "Installation",
+      "content": "docs/installation.md"
     },
     {
       "name": "JS documentation",
-      "description": "This documentation was generated based on JSdoc annotation in the source code",
+      "description": "This section was generated from JSdoc annotations in the source code",
       "content": "docs/js/jsdoc.md"
     },
     {
