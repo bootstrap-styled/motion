@@ -6,8 +6,8 @@
     "**/*.d.ts"
   ],
   "ribbon": {
-    "url": "https://module.kopaxgroup.com/bootstrap-styled/bootstrap-styled-motion",
-    "text": "Fork us on GitLab"
+    "url": "https://github.com/bootstrap-styled/motion",
+    "text": "Fork us on GitHub"
   },
   "pagePerSection": true,
   "sections": [
