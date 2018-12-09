@@ -1,6 +1,6 @@
 # Bootstrap Styled Motion
 
-Bootstrap Styled Motion components made with styled-components for bootstrap-styled.
+Bootstrap Styled Motion provide CSS3 animation through a set of React Components and keyframes.
 
 **Master**
 

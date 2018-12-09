@@ -1,7 +1,7 @@
 {
   "name": "@bootstrap-styled/motion",
   "version": "1.0.6",
-  "description": "Bootstrap Styled Motion is a set of React Components and keyframes for CSS3 animation",
+  "description": "Bootstrap Styled Motion provide CSS3 animation through a set of React Components and keyframes",
   "homepage": "https://bootstrap-styled.yeutech.com/motion",
   "main": "lib/index.js",
   "engines": {
@@ -320,6 +320,25 @@
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "transitive": {
+    "name": "motion",
+    "scope": "bootstrap-styled",
+    "scopedName": "@bootstrap-styled/motion",
+    "jsnext:main": "dist/@bootstrap-styled/motion.es.js",
+    "module": "dist/@bootstrap-styled/motion.es.js",
+    "homepage": "https://bootstrap-styled.github.io/motion",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/bootstrap-styled/motion.git"
+    },
+    "bugs": {
+      "url": "https://github.com/bootstrap-styled/motion/issues"
+    },
+    "publishConfig": {
+      "access": "public",
+      "registry": "https://registry.npmjs.org"
     }
   }
 }
