@@ -1,20 +1,21 @@
-import makeKeyframe, { toKeyframeString } from '../makeKeyframe';
-import { makeFadeIn } from '../fade/styledFade';
+import { toKeyframeString } from '../makeKeyframe';
+// import makeKeyframe, { toKeyframeString } from '../makeKeyframe';
+// import { makeFadeIn } from '../fade/styledFade';
 
 describe('motion keyframes utils', () => {
   let sampleKeyframeObject;
-
-  const userKeyframes = {
-    from: {
-      width: '10%',
-    },
-    '60%': {
-      width: '25%',
-    },
-    to: {
-      width: '100%',
-    },
-  };
+  //
+  // const userKeyframes = {
+  //   from: {
+  //     width: '10%',
+  //   },
+  //   '60%': {
+  //     width: '25%',
+  //   },
+  //   to: {
+  //     width: '100%',
+  //   },
+  // };
 
   beforeAll(() => {
     sampleKeyframeObject = {
