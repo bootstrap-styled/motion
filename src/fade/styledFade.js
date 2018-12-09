@@ -1,3 +1,9 @@
+/**
+ * @public
+ * @name makeFadeIn
+ * @description make fade in object
+ * @returns {{0%: {opacity: number}, 100%: {opacity: number}}}
+ */
 export function makeFadeIn() {
   return {
     '0%': {
@@ -9,6 +15,13 @@ export function makeFadeIn() {
   };
 }
 
+/**
+ * @public
+ * @name makeFadeLeft
+ * @description make fade left object
+ * @param distance
+ * @returns {{from: {opacity: number, transform: string}, to: {opacity: number, transform: string}}}
+ */
 export function makeFadeLeft({ distance }) {
   return {
     from: {
@@ -22,6 +35,13 @@ export function makeFadeLeft({ distance }) {
   };
 }
 
+/**
+ * @public
+ * @name makeFadeRight
+ * @description make fade right object
+ * @param distance
+ * @returns {{from: {opacity: number, transform: string}, to: {opacity: number, transform: string}}}
+ */
 export function makeFadeRight({ distance }) {
   return {
     from: {
@@ -35,6 +55,14 @@ export function makeFadeRight({ distance }) {
   };
 }
 
+
+/**
+ * @public
+ * @name makeFadeDown
+ * @description make fade down object
+ * @param distance
+ * @returns {{from: {opacity: number, transform: string}, to: {opacity: number, transform: string}}}
+ */
 export function makeFadeDown({ distance }) {
   return {
     from: {
@@ -48,6 +76,13 @@ export function makeFadeDown({ distance }) {
   };
 }
 
+/**
+ * @public
+ * @name makeFadeUp
+ * @description make fade up object
+ * @param distance
+ * @returns {{from: {opacity: number, transform: string}, to: {opacity: number, transform: string}}}
+ */
 export function makeFadeUp({ distance }) {
   return {
     from: {

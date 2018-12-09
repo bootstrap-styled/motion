@@ -1,12 +1,10 @@
+import { makeScopedTheme, toMakeTheme } from 'bootstrap-styled/lib/utils';
+
 /* eslint-disable dot-notation */
-export const makeTheme = (userTheme = {}) => {
+const dynamicTheme = () => {
   const v = {};
-  const u = userTheme;
 
-  // all var must be grouped in a named theme
-  v['_name'] = u['_name'] || 'bootstrap-styled';
-
-  v['$motion-duration'] = u['$motion-duration'] || {
+  v['$motion-duration'] = {
     xs: '200ms',
     sm: '300ms',
     md: '500ms',
@@ -15,7 +13,7 @@ export const makeTheme = (userTheme = {}) => {
   };
 
   // Use default timing function properties
-  v['$motion-timing-function'] = u['$motion-timing-function'] || {
+  v['$motion-timing-function'] = {
     linear: 'linear',
     ease: 'ease',
     easeIn: 'ease-in',
@@ -24,7 +22,7 @@ export const makeTheme = (userTheme = {}) => {
   };
 
   // Use xs for disable delay. Delay can't exceed 1000ms (in order to don't be forget by the user).
-  v['$motion-delay'] = u['$motion-delay'] || {
+  v['$motion-delay'] = {
     xs: '0ms',
     sm: '100ms',
     md: '200ms',
@@ -33,7 +31,7 @@ export const makeTheme = (userTheme = {}) => {
   };
 
   // ANIMATION CONFIGURATION
-  v['$motion-direction'] = u['$motion-direction'] || {
+  v['$motion-direction'] = {
     normal: 'normal',
     reverse: 'reverse',
     alternate: 'alternate',
@@ -41,7 +39,7 @@ export const makeTheme = (userTheme = {}) => {
   };
 
   // Use for iterate n time or loop your animation
-  v['$motion-iterations'] = u['$motion-iterations'] || {
+  v['$motion-iterations'] = {
     xs: '1',
     sm: '3',
     md: '6',
@@ -50,7 +48,7 @@ export const makeTheme = (userTheme = {}) => {
   };
 
   // Define if the animation should stop on the end and stay or come back to initial place
-  v['$motion-fill-mode'] = u['$motion-fill-mode'] || {
+  v['$motion-fill-mode'] = {
     none: 'none',
     forwards: 'forwards',
     backwards: 'backwards',
@@ -58,14 +56,14 @@ export const makeTheme = (userTheme = {}) => {
   };
 
   // Define the playing state of your components
-  v['$motion-play-state'] = u['$motion-play-state'] || {
+  v['$motion-play-state'] = {
     running: 'running',
     paused: 'paused',
   };
 
   // Motion Customisation
   // Customisation Filter
-  v['$motion-filter'] = u['$motion-filter'] || {
+  v['$motion-filter'] = {
     blur: '30px',
     brightness: '100%',
     contrast: '100%',
@@ -79,7 +77,7 @@ export const makeTheme = (userTheme = {}) => {
 
   // Moving animation configuration
   // Only used for moving element (using translate3d css properties)
-  v['$motion-distance'] = u['$motion-distance'] || {
+  v['$motion-distance'] = {
     xs: '0%',
     sm: '25%',
     md: '50%',
@@ -89,7 +87,7 @@ export const makeTheme = (userTheme = {}) => {
 
   // Scale animation configuration
   // Only used for decrease scaling of element (using scale3d css properties)
-  v['$motion-amplification'] = u['$motion-amplification'] || {
+  v['$motion-amplification'] = {
     xxs: 0.1,
     xs: 0.4,
     sm: 0.8,
@@ -101,7 +99,7 @@ export const makeTheme = (userTheme = {}) => {
 
   // Rotate animation configuration
   // using rotate3d css properties
-  v['$motion-degree'] = u['$motion-degree'] || {
+  v['$motion-degree'] = {
     xs: '45deg',
     sm: '90deg',
     md: '180deg',
@@ -110,7 +108,7 @@ export const makeTheme = (userTheme = {}) => {
   };
 
   // Define perspective for rotating animation
-  v['$motion-perspective'] = u['$motion-perspective'] || {
+  v['$motion-perspective'] = {
     xs: '64px',
     sm: '128px',
     md: '256px',
@@ -119,67 +117,89 @@ export const makeTheme = (userTheme = {}) => {
   };
 
   // Define backface visibility for rotating animation
-  v['$motion-backface-visibility'] = u['$motion-backface-visibility'] || {
+  v['$motion-backface-visibility'] = {
     hidden: 'hidden',
     visible: 'visible',
   };
 
   // Flip
-  v['$motion-flip-perspective'] = u['$motion-flip-perspective'] || v['$motion-perspective']['lg'];
-  v['$motion-hatch-amplification'] = u['$motion-hatch-amplification'] || v['$motion-amplification']['md'];
-  v['$motion-entrance-amplification'] = u['$motion-entrance-amplification'] || v['$motion-amplification']['md'];
-  v['$motion-expand-up-amplification'] = u['$motion-expand-up-amplification'] || v['$motion-amplification']['md'];
-  v['$motion-pulse-amplification'] = u['$motion-pulse-amplification'] || v['$motion-amplification']['md'];
-  v['$motion-hinge-amplification'] = u['$motion-hinge-amplification'] || v['$motion-amplification']['md'];
-  v['$motion-zoom-amplification'] = u['$motion-zoom-amplification'] || v['$motion-amplification']['md'];
-  v['$motion-rubber-amplification'] = u['$motion-rubber-amplification'] || v['$motion-amplification']['md'];
-  v['$motion-swing-amplification'] = u['$motion-swing-amplification'] || v['$motion-amplification']['md'];
-  v['$motion-roll-in-amplification'] = u['$motion-roll-in-amplification'] || v['$motion-amplification']['md'];
-  v['$motion-roll-out-amplification'] = u['$motion-roll-out-amplification'] || v['$motion-amplification']['md'];
-  v['$motion-roll-out-distance'] = u['$motion-roll-out-distance'] || '100%';
-  v['$motion-roll-in-distance'] = u['$motion-roll-in-distance'] || '100%';
-  v['$motion-slide-left-distance'] = u['$motion-slide-left-distance'] || '100%';
-  v['$motion-slide-right-distance'] = u['$motion-slide-right-distance'] || '100%';
-  v['$motion-slide-up-distance'] = u['$motion-slide-up-distance'] || '100%';
-  v['$motion-slide-down-distance'] = u['$motion-slide-down-distance'] || '100%';
-  v['$motion-slide-right-left-distance'] = u['$motion-slide-right-left-distance'] || '100%';
-  v['$motion-rotate-in-rotation'] = u['$motion-rotate-in-rotation'] || v['$motion-degree']['lg'];
-  v['$motion-rotate-left-rotation'] = u['$motion-rotate-left-rotation'] || v['$motion-degree']['xs'];
-  v['$motion-rotate-right-rotation'] = u['$motion-rotate-right-rotation'] || v['$motion-degree']['xs'];
-  v['$motion-rotate-up-left-rotation'] = u['$motion-rotate-up-left-rotation'] || v['$motion-degree']['xs'];
-  v['$motion-rotate-up-right-rotation'] = u['$motion-rotate-up-right-rotation'] || v['$motion-degree']['xs'];
-  v['$motion-light-in-distance'] = u['$motion-light-in-distance'] || '100%';
-  v['$motion-light-in-rotation'] = u['$motion-light-in-rotation'] || v['$motion-degree']['xs'];
-  v['$motion-light-out-distance'] = u['$motion-light-out-distance'] || '100%';
-  v['$motion-light-out-rotation'] = u['$motion-light-out-rotation'] || v['$motion-degree']['xs'];
+  v['$motion-flip-perspective'] = v['$motion-perspective']['lg'];
+  v['$motion-hatch-amplification'] = v['$motion-amplification']['md'];
+  v['$motion-entrance-amplification'] = v['$motion-amplification']['md'];
+  v['$motion-expand-up-amplification'] = v['$motion-amplification']['md'];
+  v['$motion-pulse-amplification'] = v['$motion-amplification']['md'];
+  v['$motion-hinge-amplification'] = v['$motion-amplification']['md'];
+  v['$motion-zoom-amplification'] = v['$motion-amplification']['md'];
+  v['$motion-rubber-amplification'] = v['$motion-amplification']['md'];
+  v['$motion-swing-amplification'] = v['$motion-amplification']['md'];
+  v['$motion-roll-in-amplification'] = v['$motion-amplification']['md'];
+  v['$motion-roll-out-amplification'] = v['$motion-amplification']['md'];
+  v['$motion-roll-out-distance'] = '100%';
+  v['$motion-roll-in-distance'] = '100%';
+  v['$motion-slide-left-distance'] = '100%';
+  v['$motion-slide-right-distance'] = '100%';
+  v['$motion-slide-up-distance'] = '100%';
+  v['$motion-slide-down-distance'] = '100%';
+  v['$motion-slide-right-left-distance'] = '100%';
+  v['$motion-rotate-in-rotation'] = v['$motion-degree']['lg'];
+  v['$motion-rotate-left-rotation'] = v['$motion-degree']['xs'];
+  v['$motion-rotate-right-rotation'] = v['$motion-degree']['xs'];
+  v['$motion-rotate-up-left-rotation'] = v['$motion-degree']['xs'];
+  v['$motion-rotate-up-right-rotation'] = v['$motion-degree']['xs'];
+  v['$motion-light-in-distance'] = '100%';
+  v['$motion-light-in-rotation'] = v['$motion-degree']['xs'];
+  v['$motion-light-out-distance'] = '100%';
+  v['$motion-light-out-rotation'] = v['$motion-degree']['xs'];
 
-  v['$motion-blur-distance'] = u['$motion-blur-distance'] || '5px';
+  v['$motion-blur-distance'] = '5px';
 
-  v['$motion-opacity-amplification'] = u['$motion-opacity-amplification'] || v['$motion-amplification']['md'];
-  v['$motion-contrast-amplification'] = u['$motion-contrast-amplification'] || v['$motion-amplification']['md'];
-  v['$motion-brightness-amplification'] = u['$motion-brightness-amplification'] || v['$motion-amplification']['md'];
-  v['$motion-grayscale-amplification'] = u['$motion-grayscale-amplification'] || v['$motion-amplification']['md'];
-  v['$motion-hue-rotate-rotation'] = u['$motion-hue-rotate-rotation'] || v['$motion-degree']['xl'];
-  v['$motion-invert-amplification'] = u['$motion-invert-amplification'] || v['$motion-amplification']['md'];
-  v['$motion-saturate-amplification'] = u['$motion-saturate-amplification'] || v['$motion-amplification']['md'];
-  v['$motion-sepia-amplification'] = u['$motion-sepia-amplification'] || v['$motion-amplification']['md'];
-  v['$motion-drop-shadow-amplification'] = u['$motion-drop-shadow-amplification'] || v['$motion-amplification']['md'];
+  v['$motion-opacity-amplification'] = v['$motion-amplification']['md'];
+  v['$motion-contrast-amplification'] = v['$motion-amplification']['md'];
+  v['$motion-brightness-amplification'] = v['$motion-amplification']['md'];
+  v['$motion-grayscale-amplification'] = v['$motion-amplification']['md'];
+  v['$motion-hue-rotate-rotation'] = v['$motion-degree']['xl'];
+  v['$motion-invert-amplification'] = v['$motion-amplification']['md'];
+  v['$motion-saturate-amplification'] = v['$motion-amplification']['md'];
+  v['$motion-sepia-amplification'] = v['$motion-amplification']['md'];
+  v['$motion-drop-shadow-amplification'] = v['$motion-amplification']['md'];
 
-  v['$motion-fade-in-down-distance'] = u['$motion-fade-in-down-distance'] || '100%';
-  v['$motion-fade-in-up-distance'] = u['$motion-fade-in-up-distance'] || '100%';
-  v['$motion-fade-in-left-distance'] = u['$motion-fade-in-left-distance'] || '100%';
-  v['$motion-fade-in-right-distance'] = u['$motion-fade-in-right-distance'] || '100%';
+  v['$motion-fade-in-down-distance'] = '100%';
+  v['$motion-fade-in-up-distance'] = '100%';
+  v['$motion-fade-in-left-distance'] = '100%';
+  v['$motion-fade-in-right-distance'] = '100%';
 
-  v['$motion-bounce-amplification'] = u['$motion-bounce-amplification'] || '100%';
-  v['$motion-bounce-down-distance'] = u['$motion-bounce-down-distance'] || '100%';
-  v['$motion-bounce-up-distance'] = u['$motion-bounce-up-distance'] || '100%';
-  v['$motion-bounce-left-distance'] = u['$motion-bounce-left-distance'] || '100%';
-  v['$motion-bounce-right-distance'] = u['$motion-bounce-right-distance'] || '100%';
+  v['$motion-bounce-amplification'] = '100%';
+  v['$motion-bounce-down-distance'] = '100%';
+  v['$motion-bounce-up-distance'] = '100%';
+  v['$motion-bounce-left-distance'] = '100%';
+  v['$motion-bounce-right-distance'] = '100%';
 
-  return { ...u, ...v };
+  return { ...v };
 };
 
 /* eslint-enable dot-notation */
-export const theme = makeTheme();
 
+const theme = makeScopedTheme('motion', dynamicTheme());
+
+/**
+ * @public
+ * @name makeTheme
+ * @description makeTheme motion
+ * @param {object} [theme={}] - The theme for your app
+ * @example
+ * import { makeTheme } from '$PACKAGE_NAME';
+ * const theme = makeTheme({
+ *   motion: {
+ *    '$motion-bounce-up-distance': '150px',
+ *   },
+ * })
+ * @return {object} - theme
+ */
+export const makeTheme = toMakeTheme(theme);
+
+/**
+ * @public
+ * @name theme
+ * @description it's the motion theme for Bootstrap Styled
+ */
 export default theme;
