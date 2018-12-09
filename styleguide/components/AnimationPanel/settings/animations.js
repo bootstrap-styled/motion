@@ -2,7 +2,7 @@ import {
   Blur,
   Brightness,
   Contrast,
-  Grayscale,
+  GrayScale,
   HueRotate,
   Invert,
   Opacity,
@@ -204,9 +204,9 @@ export default {
     name: 'Contrast',
     tag: Contrast,
   },
-  grayscale: {
-    name: 'Grayscale',
-    tag: Grayscale,
+  grayScale: {
+    name: 'GrayScale',
+    tag: GrayScale,
   },
   hueRotate: {
     name: 'HueRotate',
