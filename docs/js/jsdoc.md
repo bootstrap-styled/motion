@@ -12,14 +12,6 @@ make bounce down object
 
 -   `distance`  
 
-## makeBounceUp
-
-make bounce up object
-
-### Parameters
-
--   `distance`  
-
 ## makeBounceLeft
 
 make bounce left object
@@ -36,31 +28,19 @@ make bounce right object
 
 -   `distance`  
 
+## makeBounceUp
+
+make bounce up object
+
+### Parameters
+
+-   `distance`  
+
 ## makeFadeIn
 
 make fade in object
 
-## makeFadeLeft
-
-make fade left object
-
-### Parameters
-
--   `distance`  
-
-Returns **{from: {opacity: [number][1], transform: [string][2]}, to: {opacity: [number][1], transform: [string][2]}}** 
-
-## makeFadeRight
-
-make fade right object
-
-### Parameters
-
--   `distance`  
-
-Returns **{from: {opacity: [number][1], transform: [string][2]}, to: {opacity: [number][1], transform: [string][2]}}** 
-
-## makeFadeDown
+## makeFadeInDown
 
 make fade down object
 
@@ -70,7 +50,27 @@ make fade down object
 
 Returns **{from: {opacity: [number][1], transform: [string][2]}, to: {opacity: [number][1], transform: [string][2]}}** 
 
-## makeFadeUp
+## makeFadeInLeft
+
+make fade left object
+
+### Parameters
+
+-   `distance`  
+
+Returns **{from: {opacity: [number][1], transform: [string][2]}, to: {opacity: [number][1], transform: [string][2]}}** 
+
+## makeFadeInRight
+
+make fade right object
+
+### Parameters
+
+-   `distance`  
+
+Returns **{from: {opacity: [number][1], transform: [string][2]}, to: {opacity: [number][1], transform: [string][2]}}** 
+
+## makeFadeInUp
 
 make fade up object
 
@@ -86,7 +86,7 @@ Returns **{from: {opacity: [number][1], transform: [string][2]}, to: {opacity: [
 
 -   `distance`  
 
-## makeOpacity
+## makeBrightness
 
 ### Parameters
 
@@ -98,13 +98,13 @@ Returns **{from: {opacity: [number][1], transform: [string][2]}, to: {opacity: [
 
 -   `amplification`  
 
-## makeBrightness
+## makeDropShadow
 
 ### Parameters
 
 -   `amplification`  
 
-## makeGrayscale
+## makeGrayScale
 
 ### Parameters
 
@@ -122,6 +122,12 @@ Returns **{from: {opacity: [number][1], transform: [string][2]}, to: {opacity: [
 
 -   `amplification`  
 
+## makeOpacity
+
+### Parameters
+
+-   `amplification`  
+
 ## makeSaturate
 
 ### Parameters
@@ -129,12 +135,6 @@ Returns **{from: {opacity: [number][1], transform: [string][2]}, to: {opacity: [
 -   `amplification`  
 
 ## makeSepia
-
-### Parameters
-
--   `amplification`  
-
-## makeDropShadow
 
 ### Parameters
 
@@ -286,16 +286,6 @@ make slide down object
 
 Returns **{from: {transform: [string][2]}, to: {transform: [string][2]}}** 
 
-## makeSlideUp
-
-make slide up object
-
-### Parameters
-
--   `distance`  
-
-Returns **{from: {transform: [string][2]}, to: {transform: [string][2]}}** 
-
 ## makeSlideLeft
 
 make slide left object
@@ -326,9 +316,59 @@ make slide right left object
 
 Returns **{from: {transform: [string][2]}, to: {transform: [string][2]}}** 
 
+## makeSlideUp
+
+make slide up object
+
+### Parameters
+
+-   `distance`  
+
+Returns **{from: {transform: [string][2]}, to: {transform: [string][2]}}** 
+
+## makeEntrance
+
+make entrance object
+
+### Parameters
+
+-   `amplification`  
+
+## makeExpandUp
+
+make expand up object
+
+### Parameters
+
+-   `amplification`  
+
 ## makeFlash
 
 flash object
+
+## makeHatch
+
+make hatch object
+
+### Parameters
+
+-   `amplification`  
+
+## makeHinge
+
+make hinge object
+
+### Parameters
+
+-   `amplification`  
+
+## makePulse
+
+make pulse object
+
+### Parameters
+
+-   `amplification`  
 
 ## makeRollIn
 
@@ -363,46 +403,6 @@ Rubber object
 ## makeSwing
 
 make swing object
-
-### Parameters
-
--   `amplification`  
-
-## makeHinge
-
-make hinge object
-
-### Parameters
-
--   `amplification`  
-
-## makePulse
-
-make pulse object
-
-### Parameters
-
--   `amplification`  
-
-## makeExpandUp
-
-make expand up object
-
-### Parameters
-
--   `amplification`  
-
-## makeEntrance
-
-make entrance object
-
-### Parameters
-
--   `amplification`  
-
-## makeHatch
-
-make hatch object
 
 ### Parameters
 

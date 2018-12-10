@@ -1,4 +1,4 @@
-import { makeContrast } from './styledFilter';
+import makeContrast from './keyframes/makeContrast';
 import composeAnimation from '../templates/composeAnimation';
 import composeAmplification from '../templates/composeAmplification';
 /** @component */

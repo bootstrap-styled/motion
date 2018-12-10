@@ -1,4 +1,4 @@
-import { makeOpacity } from './styledFilter';
+import makeOpacity from './keyframes/makeOpacity';
 import composeAnimation from '../templates/composeAnimation';
 import composeAmplification from '../templates/composeAmplification';
 /** @component */

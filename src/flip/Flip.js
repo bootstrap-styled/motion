@@ -1,4 +1,4 @@
-import { makeFlip } from './styledFlip';
+import makeFlip from './keyframes/makeFlip';
 import composeAnimation from '../templates/composeAnimation';
 import composePerspective from '../templates/composePerspective';
 /** @component */

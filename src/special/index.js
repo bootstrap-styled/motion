@@ -1,29 +1,11 @@
-import {
-  makeFlash,
-  makeRollOut,
-  makeRollIn,
-  makeRubber,
-  makeSwing,
-  makeZoom,
-  makeHinge,
-  makePulse,
-  makeExpandUp,
-  makeEntrance,
-  makeHatch,
-} from './styledSpecial';
-
-import composeAnimation from '../templates/composeAnimation';
-import composeAmplification from '../templates/composeAmplification';
-import composeDistance from '../templates/composeDistance';
-
-export const Flash = composeAnimation(makeFlash);
-export const RollOut = composeDistance(composeAmplification(composeAnimation(makeRollOut), '$motion-roll-out-amplification'), '$motion-roll-out-distance');
-export const RollIn = composeDistance(composeAmplification(composeAnimation(makeRollIn), '$motion-roll-in-amplification'), '$motion-roll-in-distance');
-export const Rubber = composeAmplification(composeAnimation(makeRubber), '$motion-rubber-amplification');
-export const Swing = composeAmplification(composeAnimation(makeSwing), '$motion-swing-amplification');
-export const Zoom = composeAmplification(composeAnimation(makeZoom), '$motion-zoom-amplification');
-export const Hinge = composeAmplification(composeAnimation(makeHinge), '$motion-hinge-amplification');
-export const Pulse = composeAmplification(composeAnimation(makePulse), '$motion-pulse-amplification');
-export const ExpandUp = composeAmplification(composeAnimation(makeExpandUp), '$motion-expand-up-amplification');
-export const Entrance = composeAmplification(composeAnimation(makeEntrance), '$motion-entrance-amplification');
-export const Hatch = composeAmplification(composeAnimation(makeHatch), '$motion-hatch-amplification');
+export { default as Flash } from './Flash';
+export { default as RollOut } from './RollOut';
+export { default as RollIn } from './RollIn';
+export { default as Rubber } from './Rubber';
+export { default as Swing } from './Swing';
+export { default as Zoom } from './Zoom';
+export { default as Hinge } from './Hinge';
+export { default as Pulse } from './Pulse';
+export { default as ExpandUp } from './ExpandUp';
+export { default as Entrance } from './Entrance';
+export { default as Hatch } from './Hatch';

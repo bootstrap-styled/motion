@@ -1,4 +1,4 @@
-import { makeLightIn } from './styledLight';
+import makeLightIn from './keyframes/makeLightIn';
 import composeAnimation from '../templates/composeAnimation';
 import composeDistance from '../templates/composeDistance';
 import composeRotation from '../templates/composeRotation';

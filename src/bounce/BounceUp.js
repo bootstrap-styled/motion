@@ -1,4 +1,4 @@
-import { makeBounceUp } from './styledBounce';
+import makeBounceUp from './keyframes/makeBounceUp';
 import composeAnimation from '../templates/composeAnimation';
 import composeDistance from '../templates/composeDistance';
 /** @component */

@@ -1,4 +1,4 @@
-import { makeSwing } from './styledSpecial';
+import makeSwing from './keyframes/makeSwing';
 import composeAnimation from '../templates/composeAnimation';
 import composeAmplification from '../templates/composeAmplification';
 /** @component */

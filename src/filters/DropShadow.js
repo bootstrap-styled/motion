@@ -1,4 +1,4 @@
-import { makeDropShadow } from './styledFilter';
+import makeDropShadow from './keyframes/makeDropShadow';
 import composeAnimation from '../templates/composeAnimation';
 import composeAmplification from '../templates/composeAmplification';
 /** @component */

@@ -1,4 +1,4 @@
-import { makeSlideLeft } from './styledSlide';
+import makeSlideLeft from './keyframes/makeSlideLeft';
 import composeAnimation from '../templates/composeAnimation';
 import composeDistance from '../templates/composeDistance';
 /** @component */

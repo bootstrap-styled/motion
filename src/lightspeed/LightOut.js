@@ -1,4 +1,4 @@
-import { makeLightOut } from './styledLight';
+import makeLightOut from './keyframes/makeLightOut';
 import composeAnimation from '../templates/composeAnimation';
 import composeDistance from '../templates/composeDistance';
 import composeRotation from '../templates/composeRotation';

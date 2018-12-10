@@ -2,7 +2,7 @@
  Demo Animation Doc
  */
 
-import _ from 'lodash';
+import camelCase from 'lodash.camelcase';
 
 /* eslint-disable arrow-body-style */
 export const examplePanelAnimationWithTheme = ({ animation, settings = {} }) => {
@@ -24,7 +24,7 @@ class Demo${animation.name} extends React.Component {
     ${props && `${props}    `}return (
       ${Object.keys(settings).length ?
     `<${animation.name}
-${Object.keys(settings).length && Object.keys(settings).map((key) => `        ${_.camelCase(key.replace('$motion', ''))}={theme['${key}']['${settings[key]}']}`).join('\n')}
+${Object.keys(settings).length && Object.keys(settings).map((key) => `        ${camelCase(key.replace('$motion', ''))}={theme.motion['${key}']['${settings[key]}']}`).join('\n')}
       >
       <Button>I am ${animation.name.toLowerCase()}-ing!</Button>
     </${animation.name}>` : `<${animation.name}>

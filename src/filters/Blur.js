@@ -1,4 +1,4 @@
-import { makeBlur } from './styledFilter';
+import makeBlur from './keyframes/makeBlur';
 import composeAnimation from '../templates/composeAnimation';
 import composeDistance from '../templates/composeDistance';
 /** @component */

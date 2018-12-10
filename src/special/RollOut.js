@@ -1,4 +1,4 @@
-import { makeRollOut } from './styledSpecial';
+import makeRollOut from './keyframes/makeRollOut';
 import composeAnimation from '../templates/composeAnimation';
 import composeAmplification from '../templates/composeAmplification';
 import composeDistance from '../templates/composeDistance';
