@@ -1,4 +1,4 @@
-import { makeHatch } from './styledSpecial';
+import makeHatch from './keyframes/makeHatch';
 import composeAnimation from '../templates/composeAnimation';
 import composeAmplification from '../templates/composeAmplification';
 /** @component */

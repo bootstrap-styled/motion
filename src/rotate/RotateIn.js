@@ -1,4 +1,4 @@
-import { makeRotateIn } from './styledRotate';
+import makeRotateIn from './keyframes/makeRotateIn';
 import composeAnimation from '../templates/composeAnimation';
 import composeRotation from '../templates/composeRotation';
 /** @component */

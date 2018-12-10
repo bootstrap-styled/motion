@@ -1,4 +1,4 @@
-import { makeExpandUp } from './styledSpecial';
+import makeExpandUp from './keyframes/makeExpandUp';
 import composeAnimation from '../templates/composeAnimation';
 import composeAmplification from '../templates/composeAmplification';
 /** @component */

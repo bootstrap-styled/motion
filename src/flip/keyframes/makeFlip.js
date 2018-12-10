@@ -7,7 +7,7 @@ import { TYPE_ROTATE } from '../../typeEnums';
  * @param perspective
  * @returns {{from: {transform: string, animation-timing-function: string}, 40%: {transform: string, animation-timing-function: string}, 50%: {transform: string, animation-timing-function: string}, 80%: {transform: string, animation-timing-function: string}, to: {transform: string, animation-timing-function: string}}}
  */
-export default function makeFlip({ perspective }) {
+function makeFlip({ perspective }) {
   return {
     from: {
       transform: `perspective(${perspective}) rotate3d(0, 1, 0, -360deg)`,
@@ -33,3 +33,5 @@ export default function makeFlip({ perspective }) {
 }
 
 makeFlip.type = TYPE_ROTATE;
+
+export default makeFlip;

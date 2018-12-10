@@ -1,4 +1,4 @@
-import { makePulse } from './styledSpecial';
+import makePulse from './keyframes/makePulse';
 import composeAnimation from '../templates/composeAnimation';
 import composeAmplification from '../templates/composeAmplification';
 /** @component */

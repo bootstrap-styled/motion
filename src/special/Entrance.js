@@ -1,4 +1,4 @@
-import { makeEntrance } from './styledSpecial';
+import makeEntrance from './keyframes/makeEntrance';
 import composeAnimation from '../templates/composeAnimation';
 import composeAmplification from '../templates/composeAmplification';
 /** @component */

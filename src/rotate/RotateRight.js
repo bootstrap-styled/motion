@@ -1,4 +1,4 @@
-import { makeRotateRight } from './styledRotate';
+import makeRotateRight from './keyframes/makeRotateRight';
 import composeAnimation from '../templates/composeAnimation';
 import composeRotation from '../templates/composeRotation';
 /** @component */

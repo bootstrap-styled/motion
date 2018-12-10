@@ -1,4 +1,4 @@
-import { makeSlideUp } from './styledSlide';
+import makeSlideUp from './keyframes/makeSlideUp';
 import composeAnimation from '../templates/composeAnimation';
 import composeDistance from '../templates/composeDistance';
 /** @component */
