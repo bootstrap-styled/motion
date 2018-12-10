@@ -1,24 +1,15 @@
-/*
- * Kopax Ltd Copyright (c) 2016.
- */
-
-/**
- * AnimationPanel.react.js
- *
- * Animation panel to try animations
- *
- */
-
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import _ from 'lodash';
+import camelCase from 'lodash.camelcase';
 import cn from 'classnames';
 import styled, { withTheme } from 'styled-components';
-
+import hightlightCode from 'react-styleguidist/loaders/utils/highlightCode';
 import Tooltip from '@bootstrap-styled/v4/lib/Tooltip';
 import Collapse from '@bootstrap-styled/v4/lib/Collapse';
 import Sub from '@bootstrap-styled/v4/lib/Sub';
 import Code from '@bootstrap-styled/rsg-components/lib/Code';
+import Pre from '@bootstrap-styled/rsg-components/lib/Markdown/Pre';
+
 import { Flash } from '../../../src';
 import animationsConfig from './settings/animations';
 import settingsImport from './settings/settings';
@@ -34,11 +25,8 @@ const defaultAnimationList = [{
   tag: Flash,
 }];
 
-console.log('defaultAnimationList', defaultAnimationList);
-export class AnimationPanel extends React.Component { // eslint-disable-line react/prefer-stateless-function
-
+export class AnimationPanel extends Component { // eslint-disable-line react/prefer-stateless-function
   static TAB_THEME_PROVIDER = 'theme-provider-tab';
-
   static propTypes = {
     className: PropTypes.string.isRequired, // eslint-disable-line react/no-unused-prop-types
     theme: PropTypes.object.isRequired,
@@ -63,7 +51,7 @@ export class AnimationPanel extends React.Component { // eslint-disable-line rea
   getAnimationProps() {
     const props = {};
     Object.keys(this.state.settings).forEach((key) => {
-      props[_.camelCase(key.replace('$motion', ''))] = this.props.theme.motion[key][this.state.settings[key]];
+      props[camelCase(key.replace('$motion', ''))] = this.props.theme.motion[key][this.state.settings[key]];
     });
     return props;
   }
@@ -105,7 +93,7 @@ export class AnimationPanel extends React.Component { // eslint-disable-line rea
 
     /* eslint-disable array-callback-return, consistent-return, react/no-array-index-key */
     return (
-      <div className={cn('panel-animation', 'p-1', className)} {...rest}>
+      <div className={cn('panel-animation', className)} {...rest}>
         <div className="bd-example text-center" data-example-id="">
           <div className="animation-area py-5 cursor-help">
             {this.state.animationList.map((animation, i) => (
@@ -139,9 +127,11 @@ export class AnimationPanel extends React.Component { // eslint-disable-line rea
           isHighlightOpen={this.state.isOpen}
         />
         <Collapse isOpen={this.state.isOpen}>
-          <Code className="lang-javascript" theme={theme}>
-            {examplePanelAnimationWithTheme({ animation: this.state.selectedAnimationConfig, settings: this.state.settings })}
-          </Code>
+          <Pre>
+            <Code className="lang-javascript" theme={theme}>
+              {hightlightCode(examplePanelAnimationWithTheme({ animation: this.state.selectedAnimationConfig, settings: this.state.settings }), 'javascript')}
+            </Code>
+          </Pre>
         </Collapse>
         <SettingsForm
           settings={settingsImport}
@@ -174,6 +164,9 @@ const AnimationPanelStyled = styled(AnimationPanel)`
       .menu-item {
         margin: 0 0 0 0;
       }
+      span.badge {
+        margin-left: 1rem !important;
+      } 
     }
   }
 `;

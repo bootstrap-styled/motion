@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import omit from 'lodash/omit';
-import { withTheme } from 'styled-components';
+import omit from 'lodash.omit';
+import { withTheme, css } from 'styled-components';
 import Form from '@bootstrap-styled/v4/lib/Form';
 import FormGroup from '@bootstrap-styled/v4/lib/Form/FormGroup';
 import Label from '@bootstrap-styled/v4/lib/Label';
@@ -9,6 +9,7 @@ import Input from '@bootstrap-styled/v4/lib/Input';
 import Option from '@bootstrap-styled/v4/lib/Option';
 import Row from '@bootstrap-styled/v4/lib/Row';
 import Col from '@bootstrap-styled/v4/lib/Col';
+import Badge from '@bootstrap-styled/v4/lib/Badge';
 import Strong from '@bootstrap-styled/v4/lib/Strong';
 
 class SettingsForm extends React.Component { // eslint-disable-line react/prefer-stateless-function
@@ -29,35 +30,36 @@ class SettingsForm extends React.Component { // eslint-disable-line react/prefer
 
   render() {
     const { theme, settings } = omit(this.props, ['animationConfig', 'effect']); // eslint-disable-line
-
     /* eslint-disable array-callback-return, consistent-return */
     return (
-      <Form className="menu-configuration p-1 bd-example bd-example-modal">
+      <Form className="menu-configuration bd-example bd-example-modal pt-2">
         <Row className="row m-0">
-          <Col className="col-sm menu-item" >
+          <Col className="col-sm menu-item">
             <Strong>Select Config</Strong>
             {Object.keys(settings.main).map((key) => (
               <FormGroup key={key} row className="m-0">
                 <Label for={key} sm={4} size="sm">{settings.main[key]}</Label>
                 <Col sm={8}>
+                  <Badge color="info">{theme.motion[key][this.state[key]]}</Badge>
                   <Input type="select" size="sm" name={key} className="mx-3" onChange={this.handleChange}>
                     {Object.keys(theme.motion[key]).map((speed) => (
-                      <Option key={speed} value={speed}>{theme.motion[key][speed]}</Option>
+                      <Option key={`${key}${speed}`} value={speed}>{theme.motion[key][speed]}</Option>
                     ))}
                   </Input>
                 </Col>
               </FormGroup>
             ))}
           </Col>
-          <Col className="col-sm menu-item" >
+          <Col className="col-sm menu-item">
             <Strong>Select Mode</Strong>
             {Object.keys(settings.animation).map((key) => (
               <FormGroup key={key} row className="m-0">
                 <Label for={key} sm={4} size="sm">{settings.animation[key]}</Label>
                 <Col sm={8}>
+                  <Badge color="info">{theme.motion[key][this.state[key]]}</Badge>
                   <Input type="select" size="sm" name={key} className="mx-3" onChange={this.handleChange}>
                     {Object.keys(theme.motion[key]).map((speed) => (
-                      <Option key={speed} value={speed}>{theme.motion[key][speed]}</Option>
+                      <Option key={`${key}${speed}`} value={speed}>{theme.motion[key][speed]}</Option>
                     ))}
                   </Input>
                 </Col>

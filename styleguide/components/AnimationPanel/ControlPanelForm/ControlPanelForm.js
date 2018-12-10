@@ -11,7 +11,6 @@ import Label from '@bootstrap-styled/v4/lib/Label';
 import Option from '@bootstrap-styled/v4/lib/Option';
 
 export default class ControlPanelForm extends React.Component {
-
   static propTypes = {
     handleAddAnimation: PropTypes.func.isRequired,
     handleChangeAnimation: PropTypes.func.isRequired,
@@ -32,12 +31,12 @@ export default class ControlPanelForm extends React.Component {
 
   render() {
     const { animationsConfig } = this.props;
-
     /* eslint-disable array-callback-return, consistent-return */
     return (
-      <Form inline className="p-1">
-        <FormGroup className="mr-1">
+      <Form inline>
+        <FormGroup>
           <Button
+            color="warning"
             type="button"
             onClick={this.handleAddAnimation}
             className="mr-1 cursor-pointer"
@@ -57,14 +56,12 @@ export default class ControlPanelForm extends React.Component {
             type="button"
             onClick={this.props.clearAnimation}
             color="danger"
-            className="cursor-pointer"
+            className="mr-1 cursor-pointer"
           >
             <Fa trash />
           </Button>
-        </FormGroup>
-        <FormGroup className="mr-1">
           <InputGroup>
-            <InputGroupAddon tag={Label}>Select animation name</InputGroupAddon>
+            <InputGroupAddon tag={Label}>Select animation</InputGroupAddon>
             <Input type="select" name="animation" onChange={this.handleChangeAnimation}>
               {Object.keys(animationsConfig).map((key) => (
                 <Option key={key} value={key}>{animationsConfig[key].name}</Option>
