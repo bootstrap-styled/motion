@@ -1,10 +1,15 @@
 # motion
 
-[![Build Status](https://travis-ci.org/bootstrap-styled/motion.svg?branch=master)](https://travis-ci.org/bootstrap-styled/motion) [![npm Version](https://img.shields.io/npm/v/@bootstrap-styled/motion.svg?style=flat)](https://www.npmjs.com/package/@bootstrap-styled/motion) [![License](https://img.shields.io/npm/l/@bootstrap-styled/motion.svg?style=flat)](https://www.npmjs.com/package/@bootstrap-styled/motion) [![NPM monthly downloads](https://img.shields.io/npm/dm/@bootstrap-styled/motion.svg?style=flat)](https://npmjs.org/package/@bootstrap-styled/motion) [![NPM total downloads](https://img.shields.io/npm/dt/@bootstrap-styled/motion.svg?style=flat)](https://npmjs.org/package/@bootstrap-styled/motion) [![npm Version](https://img.shields.io/node/v/@bootstrap-styled/motion.svg?style=flat)](https://www.npmjs.com/package/@bootstrap-styled/motion) [![Module formats](https://img.shields.io/badge/module%20formats-umd%2C%20cjs%2C%20esm-green.svg?style=flat)](https://www.npmjs.com/package/@bootstrap-styled/motion)
+[![Build Status](https://travis-ci.org/bootstrap-styled/motion.svg?branch=master)](https://travis-ci.org/bootstrap-styled/motion) 
+[![npm Version](https://img.shields.io/npm/v/@bootstrap-styled/motion.svg?style=flat)](https://www.npmjs.com/package/@bootstrap-styled/motion) 
+[![License](https://img.shields.io/npm/l/@bootstrap-styled/motion.svg?style=flat)](https://www.npmjs.com/package/@bootstrap-styled/motion) 
+[![NPM monthly downloads](https://img.shields.io/npm/dm/@bootstrap-styled/motion.svg?style=flat)](https://npmjs.org/package/@bootstrap-styled/motion) 
+[![NPM total downloads](https://img.shields.io/npm/dt/@bootstrap-styled/motion.svg?style=flat)](https://npmjs.org/package/@bootstrap-styled/motion) [![npm Version](https://img.shields.io/node/v/@bootstrap-styled/motion.svg?style=flat)](https://www.npmjs.com/package/@bootstrap-styled/motion) 
+[![Module formats](https://img.shields.io/badge/module%20formats-umd%2C%20cjs%2C%20esm-green.svg?style=flat)](https://www.npmjs.com/package/@bootstrap-styled/motion)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=com.github.bootstrap-styled.motion&metric=coverage)](https://sonarcloud.io/dashboard?id=com.github.bootstrap-styled.motion) [![Quality gate status](https://sonarcloud.io/api/project_badges/measure?project=com.github.bootstrap-styled.motion&metric=alert_status)](https://sonarcloud.io/dashboard?id=com.github.bootstrap-styled.motion)
+[![gitter](https://badges.gitter.im/bootstrap-styled/bootstrap-styled.svg)](https://gitter.im/bootstrap-styled)
 
-Bootstrap Styled Motion provide CSS3 animation through a set of React Components and keyframes
-
+Bootstrap Styled Motion provide CSS3 animation through a set of React Components and keyframes.
 
 ## Table of Contents
 
