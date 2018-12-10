@@ -1,4 +1,4 @@
-import { makeSepia } from './styledFilter';
+import makeSepia from './keyframes/makeSepia';
 import composeAnimation from '../templates/composeAnimation';
 import composeAmplification from '../templates/composeAmplification';
 /** @component */

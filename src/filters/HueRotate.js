@@ -1,4 +1,4 @@
-import { makeHueRotate } from './styledFilter';
+import makeHueRotate from './keyframes/makeHueRotate';
 import composeAnimation from '../templates/composeAnimation';
 import composeRotation from '../templates/composeRotation';
 /** @component */

@@ -1,4 +1,4 @@
-import { makeInvert } from './styledFilter';
+import makeInvert from './keyframes/makeInvert';
 import composeAnimation from '../templates/composeAnimation';
 import composeAmplification from '../templates/composeAmplification';
 /** @component */

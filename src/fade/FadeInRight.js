@@ -1,5 +1,5 @@
-import { makeFadeRight } from './styledFade';
+import makeFadeInRight from './keyframes/makeFadeInRight';
 import composeAnimation from '../templates/composeAnimation';
 import composeDistance from '../templates/composeDistance';
 /** @component */
-export default composeDistance(composeAnimation(makeFadeRight), '$motion-fade-in-right-distance');
+export default composeDistance(composeAnimation(makeFadeInRight), '$motion-fade-in-right-distance');

@@ -2,19 +2,11 @@
  * Testing our styled Lights utils
  */
 
-import {
-  makeLightIn,
-  makeLightOut,
-} from '../styledLight';
+import makeLightOut from '../makeLightOut';
 
-describe('styledRotate', () => {
+describe('makeLightOut', () => {
   const distance = '10px';
   const rotation = '30deg';
-  describe('makeLightInResult', () => {
-    it('should returns an object', () => {
-      expect(typeof makeLightIn({ distance, rotation })).toBe('object');
-    });
-  });
   describe('makeLightOut', () => {
     it('should returns an object', () => {
       expect(typeof makeLightOut({ distance, rotation })).toBe('object');

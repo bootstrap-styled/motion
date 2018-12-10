@@ -1,4 +1,4 @@
-import { makeSaturate } from './styledFilter';
+import makeSaturate from './keyframes/makeSaturate';
 import composeAnimation from '../templates/composeAnimation';
 import composeAmplification from '../templates/composeAmplification';
 /** @component */

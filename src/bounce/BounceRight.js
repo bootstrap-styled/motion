@@ -1,4 +1,4 @@
-import { makeBounceRight } from './styledBounce';
+import makeBounceRight from './keyframes/makeBounceRight';
 import composeAnimation from '../templates/composeAnimation';
 import composeDistance from '../templates/composeDistance';
 /** @component */

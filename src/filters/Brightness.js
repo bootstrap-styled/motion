@@ -1,4 +1,4 @@
-import { makeBrightness } from './styledFilter';
+import makeBrightness from './keyframes/makeBrightness';
 import composeAnimation from '../templates/composeAnimation';
 import composeAmplification from '../templates/composeAmplification';
 /** @component */
