@@ -3,12 +3,15 @@ sonar-project.properties
 .gitlab-ci.yml
 internals
 .babelrc
-babel.config.js
 babel.ext.json
+babel.config.json
 .editorconfig
 .eslintignore
 bundle-stats.html
 CODE_OF_CONDUCT.md
+CHANGELOG.md
+README.md
+CONTRIBUTING.md
 declination.json
 rollup.config.js
 /styleguide.config.js
@@ -18,5 +21,3 @@ coverage/
 docs/
 reports/
 /styleguide
-lib/**/*.md
-src/**/*.md
