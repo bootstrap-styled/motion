@@ -5,7 +5,9 @@ import React from 'react';
 import { mount } from 'enzyme';
 import { ThemeProvider } from 'styled-components';
 import theme from '../../theme';
-import { Blur, Contrast, Brightness, GrayScale, HueRotate, Invert, Opacity, Saturate, Sepia, DropShadow } from '../index';
+import {
+  Blur, Contrast, Brightness, GrayScale, HueRotate, Invert, Opacity, Saturate, Sepia, DropShadow,
+} from '../index';
 
 const renderComponent = (EffectComponent = Blur, props = {}) => mount(
   <ThemeProvider theme={theme}>

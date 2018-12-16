@@ -5,7 +5,9 @@ import React from 'react';
 import { mount } from 'enzyme';
 import { ThemeProvider } from 'styled-components';
 import theme from '../../theme';
-import { SlideUp, SlideDown, SlideLeft, SlideRight, SlideRightLeft } from '../index';
+import {
+  SlideUp, SlideDown, SlideLeft, SlideRight, SlideRightLeft,
+} from '../index';
 
 const renderComponent = (EffectComponent = SlideUp, props = {}) => mount(
   <ThemeProvider theme={theme}>

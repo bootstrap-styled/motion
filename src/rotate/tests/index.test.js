@@ -5,7 +5,9 @@ import React from 'react';
 import { mount } from 'enzyme';
 import { ThemeProvider } from 'styled-components';
 import theme from '../../theme';
-import { RotateIn, RotateLeft, RotateRight, RotateUpLeft, RotateUpRight } from '../index';
+import {
+  RotateIn, RotateLeft, RotateRight, RotateUpLeft, RotateUpRight,
+} from '../index';
 
 const renderComponent = (EffectComponent = RotateIn, props = {}) => mount(
   <ThemeProvider theme={theme}>

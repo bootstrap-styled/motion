@@ -36,7 +36,7 @@ describe('composeDistance', () => {
   it('should render an <DistanceAnimation /> with theme distance', () => {
     const renderedComponent = mount(
       <ThemeProvider theme={theme}>
-        <DistanceAnimation >Test</DistanceAnimation>
+        <DistanceAnimation>Test</DistanceAnimation>
       </ThemeProvider>
     );
     expect(renderedComponent.length).toBe(1);

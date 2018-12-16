@@ -5,7 +5,9 @@ import React from 'react';
 import { mount } from 'enzyme';
 import { ThemeProvider } from 'styled-components';
 import theme from '../../theme';
-import { FadeIn, FadeInDown, FadeInUp, FadeInLeft, FadeInRight } from '../index';
+import {
+  FadeIn, FadeInDown, FadeInUp, FadeInLeft, FadeInRight,
+} from '../index';
 
 const renderComponent = (EffectComponent = FadeIn, props = {}) => mount(
   <ThemeProvider theme={theme}>
