@@ -5,7 +5,9 @@ import React from 'react';
 import { mount } from 'enzyme';
 import { ThemeProvider } from 'styled-components';
 import theme from '../../theme';
-import { Bounce, BounceDown, BounceUp, BounceLeft, BounceRight } from '../index';
+import {
+  Bounce, BounceDown, BounceUp, BounceLeft, BounceRight,
+} from '../index';
 
 const renderComponent = (EffectComponent = Bounce, props = {}) => mount(
   <ThemeProvider theme={theme}>

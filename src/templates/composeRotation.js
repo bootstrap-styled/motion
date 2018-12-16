@@ -15,7 +15,7 @@ export default function composeRotation(AbstractAnim, variableName) {
     const { rotation, theme, ...rest } = props;
 
     let degree = rotation || theme.motion[variableName];
-    if (!isNaN(rotation) || degree.indexOf('deg') === -1) {
+    if (!isNaN(rotation) || degree.indexOf('deg') === -1) { // eslint-disable-line no-restricted-globals
       degree = `${parseInt(degree, 10).toString()}deg`;
     }
 

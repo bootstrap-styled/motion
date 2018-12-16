@@ -8,7 +8,7 @@ import mapToCssModules from 'map-to-css-modules';
 import { TYPE_ROTATE } from '../typeEnums';
 import makeKeyframe from '../makeKeyframe';
 
-
+/* eslint-disable react/destructuring-assignment, prefer-destructuring */
 /**
  * @public
  * @name composeAnimation
@@ -55,6 +55,8 @@ export default function composeAnimation(makeAnimation) {
       defaults: {},
       styles: null,
     };
+
+    makeAnimation = makeAnimation;
 
     componentWillMount = () => {
       this.updateDefaultsFromTheme(this.updateAnimationStyles);
@@ -111,7 +113,9 @@ export default function composeAnimation(makeAnimation) {
 
       const amplification = props.amplification || defaults.amplification;
 
-      const keyframeName = makeKeyframe(this.makeAnimation, { distance, rotation, perspective, amplification }, props.keyframes);
+      const keyframeName = makeKeyframe(this.makeAnimation, {
+        distance, rotation, perspective, amplification,
+      }, props.keyframes);
 
       let styles = css`
         animation: ${keyframeName} ${duration} ${timingFunction} ${delay} ${iterations} ${direction} ${fillMode} ${playState};
@@ -128,8 +132,6 @@ export default function composeAnimation(makeAnimation) {
         styles,
       });
     }
-
-    makeAnimation = makeAnimation;
 
     render() {
       const {

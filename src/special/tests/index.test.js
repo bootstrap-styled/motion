@@ -5,7 +5,9 @@ import React from 'react';
 import { mount } from 'enzyme';
 import { ThemeProvider } from 'styled-components';
 import theme from '../../theme';
-import { Flash, RollOut, RollIn, Rubber, Swing, Zoom, Hinge, Pulse, ExpandUp, Entrance, Hatch } from '../index';
+import {
+  Flash, RollOut, RollIn, Rubber, Swing, Zoom, Hinge, Pulse, ExpandUp, Entrance, Hatch,
+} from '../index';
 
 const renderComponent = (EffectComponent = Flash, props = {}) => mount(
   <ThemeProvider theme={theme}>
