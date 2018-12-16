@@ -25,7 +25,7 @@
     "build:dist:watch": "rollup -c --watch",
     "build:lib:watch": "npm run build:lib -- --watch",
     "test": "npm run lint && npm run test:web",
-    "test:web": "NODE_ENV=test TEST_REPORT_PATH=reports jest --coverage",
+    "test:web": "NODE_ENV=test jest --coverage",
     "test:clean": "rimraf ./coverage",
     "test:watch": "npm run test -- --watch",
     "lint": "eslint src",
@@ -45,12 +45,6 @@
   "bugs": {
     "url": "https://github.com/bootstrap-styled/motion/issues"
   },
-  "files": [
-    "LICENSE.md",
-    "dist",
-    "lib",
-    "src"
-  ],
   "keywords": [
     "bootstrap-styled",
     "styled-components",
@@ -235,6 +229,11 @@
     "setupTestFrameworkScriptFile": "<rootDir>/internals/testing/test-bundler.js",
     "testRegex": "tests/.*\\.test\\.js$",
     "testResultsProcessor": "jest-sonar-reporter"
+  },
+  "jestSonar": {
+    "reportPath": "reports",
+    "reportFile": "test-report.xml",
+    "indent": 2
   },
   "lint-staged": {
     "*.js": [
