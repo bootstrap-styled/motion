@@ -1,3 +1,11 @@
+# [1.2.0](https://github.com/bootstrap-styled/motion/compare/v1.1.0...v1.2.0) (2018-12-16)
+
+
+### Features
+
+* **greenkeeper:** added greenkeeper and updated all deps ([f63cbb6](https://github.com/bootstrap-styled/motion/commit/f63cbb6))
+* **greenkeeper:** added greenkeeper and updated all deps ([0756ee9](https://github.com/bootstrap-styled/motion/commit/0756ee9))
+
 # [1.1.0](https://github.com/bootstrap-styled/motion/compare/v1.0.1...v1.1.0) (2018-12-10)
 
 
