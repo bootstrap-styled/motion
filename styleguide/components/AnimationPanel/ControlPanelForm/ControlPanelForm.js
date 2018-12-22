@@ -10,6 +10,7 @@ import FormGroup from '@bootstrap-styled/v4/lib/Form/FormGroup';
 import Label from '@bootstrap-styled/v4/lib/Label';
 import Option from '@bootstrap-styled/v4/lib/Option';
 
+/* eslint-disable react/destructuring-assignment */
 export default class ControlPanelForm extends React.Component {
   static propTypes = {
     handleAddAnimation: PropTypes.func.isRequired,
@@ -36,6 +37,7 @@ export default class ControlPanelForm extends React.Component {
       <Form inline>
         <FormGroup>
           <Button
+            size="sm"
             color="warning"
             type="button"
             onClick={this.handleAddAnimation}
@@ -44,6 +46,7 @@ export default class ControlPanelForm extends React.Component {
             Launch Animation
           </Button>
           <Button
+            size="sm"
             type="button"
             onClick={this.props.toggleHighlight}
             active={this.props.isHighlightOpen}
@@ -54,13 +57,14 @@ export default class ControlPanelForm extends React.Component {
           </Button>
           <Button
             type="button"
+            size="sm"
             onClick={this.props.clearAnimation}
             color="danger"
             className="mr-1 cursor-pointer"
           >
             <Fa trash />
           </Button>
-          <InputGroup>
+          <InputGroup size="sm">
             <InputGroupAddon tag={Label}>Select animation</InputGroupAddon>
             <Input type="select" name="animation" onChange={this.handleChangeAnimation}>
               {Object.keys(animationsConfig).map((key) => (
@@ -74,4 +78,3 @@ export default class ControlPanelForm extends React.Component {
     /* eslint-enable array-callback-return, consistent-return */
   }
 }
-

@@ -13,11 +13,13 @@
   "sections": [
     {
       "name": "Introduction",
-      "content": "docs/introduction.md"
-    },
-    {
-      "name": "Live examples",
-      "content": "docs/live-examples.md"
+      "content": "docs/introduction.md",
+      "sections": [
+        {
+          "name": "Live examples",
+          "content": "docs/live-examples.md"
+        }
+      ]
     },
     {
       "name": "Prerequisite",
