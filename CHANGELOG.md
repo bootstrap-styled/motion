@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/bootstrap-styled/motion/compare/v1.2.0...v1.2.1) (2019-01-09)
+
+
+### Bug Fixes
+
+* **dependencies:** updated all dependencies ([e74c4dc](https://github.com/bootstrap-styled/motion/commit/e74c4dc))
+
 # [1.2.0](https://github.com/bootstrap-styled/motion/compare/v1.1.0...v1.2.0) (2018-12-16)
 
 
