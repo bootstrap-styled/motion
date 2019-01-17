@@ -28,6 +28,7 @@ export default function composeAnimation(makeAnimation) {
       children: PropTypes.node.isRequired,
       className: PropTypes.string,
       theme: PropTypes.object.isRequired,
+      inlineBlock: PropTypes.bool,
       inline: PropTypes.bool,
       duration: PropTypes.string,
       timingFunction: PropTypes.string,
@@ -138,6 +139,7 @@ export default function composeAnimation(makeAnimation) {
         className,
         children,
         inline,
+        inlineBlock,
         cssModule,
         ...rest
       } = omit(this.props, [
@@ -161,7 +163,10 @@ export default function composeAnimation(makeAnimation) {
       return (
         <span
           css={css`${this.state.styles}`}
-          className={mapToCssModules(cn({ 'd-inline-block': inline }, className), cssModule)}
+          className={mapToCssModules(cn({
+            'd-inline': inline,
+            'd-inline-block': inlineBlock,
+          }, className), cssModule)}
           {...rest}
         >
           {children}
