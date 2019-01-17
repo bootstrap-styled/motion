@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/bootstrap-styled/motion/compare/v1.2.1...v2.0.0) (2019-01-17)
+
+
+### Bug Fixes
+
+* **composeAnimation:** fixed props inline, added props inlineBlock ([926f025](https://github.com/bootstrap-styled/motion/commit/926f025))
+
+
+### BREAKING CHANGES
+
+* **composeAnimation:** inline props now addClass d-inline to animation instead of d-inline-block
+
 ## [1.2.1](https://github.com/bootstrap-styled/motion/compare/v1.2.0...v1.2.1) (2019-01-09)
 
 
