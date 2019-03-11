@@ -139,7 +139,7 @@
     "@babel/plugin-transform-react-inline-elements": "^7.2.0",
     "@babel/preset-env": "^7.2.3",
     "@babel/preset-react": "^7.0.0",
-    "@bootstrap-styled/documentation": "^1.2.1",
+    "@bootstrap-styled/documentation": "^2.0.0",
     "@bootstrap-styled/provider": "^1.4.2",
     "@bootstrap-styled/rsg-components": "^1.1.4",
     "@bootstrap-styled/v4": "^3.0.4",
