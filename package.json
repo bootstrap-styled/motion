@@ -170,7 +170,7 @@
     "eslint-plugin-react": "^7.12.3",
     "jest-cli": "^23.6.0",
     "jest-sonar-reporter": "^2.0.0",
-    "lint-staged": "^8.1.0",
+    "lint-staged": "^9.0.0",
     "lodash.camelcase": "^4.3.0",
     "lodash.omit": "^4.5.0",
     "pre-commit": "^1.2.2",
