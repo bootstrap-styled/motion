@@ -155,7 +155,7 @@
     "babel-plugin-add-module-exports": "^1.0.0",
     "babel-plugin-array-includes": "^2.0.3",
     "babel-plugin-dynamic-import-node": "^2.2.0",
-    "babel-plugin-react-intl": "^3.0.1",
+    "babel-plugin-react-intl": "^4.0.0",
     "babel-plugin-react-transform": "^3.0.0",
     "babel-plugin-styled-components": "^1.10.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.21",
