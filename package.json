@@ -144,7 +144,7 @@
     "@bootstrap-styled/rsg-components": "^1.1.4",
     "@bootstrap-styled/v4": "^3.0.4",
     "@rollup-umd/documentation": "^1.3.5",
-    "@semantic-release/changelog": "^3.0.2",
+    "@semantic-release/changelog": "^5.0.0",
     "@semantic-release/git": "^7.0.7",
     "@semantic-release/github": "^5.2.8",
     "@semantic-release/npm": "^5.1.3",
