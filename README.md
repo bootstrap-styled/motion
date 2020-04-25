@@ -7,7 +7,7 @@
 [![NPM total downloads](https://img.shields.io/npm/dt/@bootstrap-styled/motion.svg?style=flat)](https://npmjs.org/package/@bootstrap-styled/motion) [![npm Version](https://img.shields.io/node/v/@bootstrap-styled/motion.svg?style=flat)](https://www.npmjs.com/package/@bootstrap-styled/motion) 
 [![Module formats](https://img.shields.io/badge/module%20formats-umd%2C%20cjs%2C%20esm-green.svg?style=flat)](https://www.npmjs.com/package/@bootstrap-styled/motion)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=com.github.bootstrap-styled.motion&metric=coverage)](https://sonarcloud.io/dashboard?id=com.github.bootstrap-styled.motion) [![Quality gate status](https://sonarcloud.io/api/project_badges/measure?project=com.github.bootstrap-styled.motion&metric=alert_status)](https://sonarcloud.io/dashboard?id=com.github.bootstrap-styled.motion)
-[![gitter](https://badges.gitter.im/bootstrap-styled/bootstrap-styled.svg)](https://gitter.im/bootstrap-styled) [![Greenkeeper badge](https://badges.greenkeeper.io/bootstrap-styled/motion.svg)](https://greenkeeper.io/)
+[![gitter](https://badges.gitter.im/bootstrap-styled/bootstrap-styled.svg)](https://gitter.im/bootstrap-styled) 
 
 Bootstrap Styled Motion provide CSS3 animation through a set of React Components and keyframes.
 
